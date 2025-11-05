@@ -14,11 +14,29 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary: hsl(28, 100%, 60%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --background: hsl(28, 100%, 98%);
+            --foreground: hsl(28, 10%, 15%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(28, 10%, 15%);
+            --muted: hsl(28, 20%, 95%);
+            --muted-foreground: hsl(28, 10%, 45%);
+            --accent: hsl(150, 60%, 45%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            --destructive: hsl(0, 84%, 60%);
+            --destructive-foreground: hsl(0, 0%, 98%);
+            --border: hsl(28, 20%, 88%);
+            --radius: 0.65rem;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: #fef6f0;
+            color: var(--foreground);
+            background: var(--background);
+            -webkit-font-smoothing: antialiased;
         }
         
         h1, h2, h3 {
@@ -28,488 +46,805 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.5rem;
         }
         
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
         
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        .btn-primary {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 1.25rem 2rem;
+            font-size: 1.125rem;
+            box-shadow: 0 10px 30px rgba(247, 147, 30, 0.3);
         }
         
-        .header p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            line-height: 1.8;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(247, 147, 30, 0.4);
         }
         
-        .header-image {
-            max-width: 600px;
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin: 30px auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        .btn-outline {
+            background: transparent;
+            color: var(--foreground);
+            border: 2px solid var(--border);
+            padding: 1.25rem 2rem;
+            font-size: 1.125rem;
+        }
+        
+        .btn-outline:hover {
+            background: var(--muted);
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: var(--muted-foreground);
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+        
+        .btn-ghost:hover {
+            background: var(--muted);
+        }
+        
+        /* Card Styles */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, rgba(247, 147, 30, 0.05), var(--background));
+            padding: 4rem 0 6rem;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         
         .urgent-badge {
             display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--destructive);
+            border-radius: 9999px;
+            font-size: 0.875rem;
             font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
         
-        /* Donate Button */
-        .donate-section {
-            background: white;
-            padding: 60px 20px;
-            text-align: center;
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.75rem);
+            margin-bottom: 1.5rem;
         }
         
-        .donate-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-            color: white;
-            padding: 20px 60px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+        .hero-text {
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
+            line-height: 1.7;
         }
         
-        .donate-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+        .hero-text-bold {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 1.5rem;
         }
         
-        .donate-info {
-            margin-top: 20px;
-            color: #666;
-            font-size: 0.95rem;
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1rem;
         }
         
-        /* Progress Bar */
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+        }
+        
+        .hero-image {
+            width: 100%;
+            border-radius: calc(var(--radius) * 2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .hero-stat-card {
+            position: absolute;
+            bottom: -1.5rem;
+            left: -1.5rem;
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(247, 147, 30, 0.2);
+            max-width: 18rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-stat-card {
+                position: static;
+                margin-top: 1.5rem;
+                max-width: 100%;
+            }
+        }
+        
+        /* Progress Section */
         .progress-section {
-            background: #f8f9fa;
-            padding: 40px 20px;
-            text-align: center;
+            padding: 3rem 0;
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
         
-        .progress-bar {
-            max-width: 600px;
-            margin: 20px auto;
-            background: #e0e0e0;
-            height: 30px;
-            border-radius: 15px;
+        .progress-container {
+            max-width: 56rem;
+            margin: 0 auto;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-bar-wrapper {
+            width: 100%;
+            background: var(--muted);
+            border-radius: 9999px;
+            height: 1rem;
             overflow: hidden;
         }
         
-        .progress-fill {
-            background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+        .progress-bar-fill {
             height: 100%;
-            width: 0%;
-            transition: width 1s ease;
-        }
-        
-        .progress-text {
-            margin-top: 15px;
-            font-size: 1.1rem;
-            color: #555;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 9999px;
+            transition: width 0.5s ease;
         }
         
         /* Photo Gallery */
         .gallery-section {
-            padding: 60px 20px;
-            background: white;
+            padding: 4rem 0 6rem;
         }
         
-        .gallery-section h2 {
+        .section-header {
             text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(1.875rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
+            max-width: 42rem;
+            margin: 0 auto;
         }
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
         
         .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
         }
         
         .gallery-item img {
             width: 100%;
-            height: 250px;
+            height: 16rem;
             object-fit: cover;
-            display: block;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
         
         .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-            padding: 15px;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
         }
         
         /* Needs Section */
         .needs-section {
-            padding: 60px 20px;
-            background: #f8f9fa;
-        }
-        
-        .needs-section h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
-        
-        .needs-subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
+            padding: 4rem 0 6rem;
+            background: rgba(247, 147, 30, 0.03);
         }
         
         .needs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 75rem;
             margin: 0 auto;
         }
         
+        @media (min-width: 768px) {
+            .needs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .needs-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
         .need-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
+            border: 2px solid var(--border);
+            transition: border-color 0.3s;
         }
         
         .need-card:hover {
-            border-color: #ff6b35;
-            transform: translateY(-5px);
+            border-color: rgba(247, 147, 30, 0.5);
         }
         
         .need-card.highlight {
-            border-color: #ff6b35;
-            background: #fff5f0;
+            border-color: rgba(247, 147, 30, 0.3);
+            background: rgba(247, 147, 30, 0.05);
+        }
+        
+        .need-card.highlight:hover {
+            border-color: rgba(247, 147, 30, 0.6);
         }
         
         .need-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
         
         .need-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
         }
         
         .need-card ul {
             list-style: none;
-            color: #666;
+            color: var(--muted-foreground);
         }
         
         .need-card li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
+            padding: 0.25rem 0;
         }
         
-        .need-card li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #ff6b35;
-            font-weight: bold;
+        /* Donation Section */
+        .donation-section {
+            padding: 4rem 0 6rem;
         }
         
-        /* Trust Section */
-        .trust-section {
-            padding: 60px 20px;
-            background: white;
-            text-align: center;
+        .donation-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 42rem;
+            margin: 0 auto 3rem;
         }
         
-        .trust-section h2 {
+        @media (min-width: 640px) {
+            .donation-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .donation-card {
+            border: 2px solid rgba(247, 147, 30, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .donation-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .donation-card-blue {
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+        
+        .donation-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
             font-size: 2rem;
-            margin-bottom: 20px;
         }
         
-        .trust-content {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            color: #555;
-            font-size: 1.05rem;
+        .trust-box {
+            background: rgba(247, 147, 30, 0.05);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 2px solid rgba(247, 147, 30, 0.2);
+        }
+        
+        /* Crisis Section */
+        .crisis-section {
+            padding: 4rem 0 6rem;
+            background: linear-gradient(to bottom, rgba(247, 147, 30, 0.03), var(--background));
+        }
+        
+        .crisis-stats {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        @media (min-width: 768px) {
+            .crisis-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .stat-card {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--destructive);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 4rem 0 6rem;
+            background: rgba(247, 147, 30, 0.05);
         }
         
         /* Footer */
         .footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 20px;
+            padding: 3rem 0;
+            background: var(--card);
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-content {
+            max-width: 56rem;
+            margin: 0 auto;
             text-align: center;
         }
         
-        .footer h3 {
-            margin-bottom: 15px;
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            flex-wrap: wrap;
         }
         
-        .footer p {
-            margin: 10px 0;
+        /* Icon Styles */
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            display: inline-block;
+            margin-right: 0.5rem;
         }
         
-        .footer a {
-            color: #ff6b35;
-            text-decoration: none;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .header p {
-                font-size: 1rem;
-            }
-            
-            .donate-button {
-                padding: 15px 40px;
-                font-size: 1.1rem;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .needs-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mt-4 { margin-top: 1rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <div class="header">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="urgent-badge">🚨 URGENT: Hurricane Relief Needed</div>
-            <h1>Help Montego Bay Families Rebuild After Hurricane Melissa</h1>
-            <p>My family and neighbors in Montego Bay, Jamaica have lost everything to Hurricane Melissa—the strongest storm to hit Jamaica in modern history. Homes destroyed. No power. No clean water. Families sleeping in damaged shelters without basic necessities.</p>
-            <img src="dyAaNcRYx0gn.jpg" alt="Aerial view of flooded Montego Bay neighborhoods" class="header-image">
-            <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.9;">Category 5 Hurricane - 185 mph winds</p>
+            <div class="hero-grid">
+                <div>
+                    <div class="urgent-badge">
+                        🚨 URGENT: Hurricane Relief Needed
+                    </div>
+                    <h1>Help Montego Bay Families Rebuild After Hurricane Melissa</h1>
+                    <p class="hero-text">
+                        My family and neighbors in Montego Bay, Jamaica have lost everything to Hurricane Melissa—the strongest storm to hit Jamaica in modern history. Homes destroyed. No power. No clean water. Families sleeping in damaged shelters without basic necessities.
+                    </p>
+                    <p class="hero-text-bold">
+                        They urgently need clothing, bedding, and personal care items to survive. Every dollar you give goes directly to purchasing and delivering these essentials to families who have nowhere else to turn.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="btn btn-primary" target="_blank" rel="noopener">
+                            ❤️ Donate Now
+                        </a>
+                        <button class="btn btn-outline" onclick="shareLink()">
+                            🔗 Share This Campaign
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="dyAaNcRYx0gn.jpg" alt="Aerial view of flooding in Montego Bay from Hurricane Melissa" class="hero-image">
+                    <div class="hero-stat-card">
+                        <p style="font-size: 0.875rem; font-weight: 600; color: var(--muted-foreground); margin-bottom: 0.25rem;">Category 5 Hurricane</p>
+                        <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem;">185 mph winds</p>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">Stronger than Hurricane Katrina</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Donate Section -->
-    <div class="donate-section">
+    <!-- Progress Tracker -->
+    <section class="progress-section">
         <div class="container">
-            <h2 style="font-size: 2rem; margin-bottom: 20px;">Every Dollar Brings Hope</h2>
-            <p style="max-width: 600px; margin: 0 auto 30px; color: #666;">Your donation provides immediate relief supplies to families who have lost everything. Together, we can help Montego Bay rebuild.</p>
-            <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="donate-button" target="_blank" rel="noopener">
-                💝 Donate Now
-            </a>
-            <div class="donate-info">
-                🔒 Secure payment via Stripe • All major cards accepted<br>
-                Minimum $5 • Suggested: $25, $50, $100, $250 • Choose your amount
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div>
+                        <p style="font-size: 1.875rem; font-weight: 700;">$<span id="raised">0</span></p>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">raised of $25,000 goal</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--accent);"><span id="percent">0</span>%</p>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">funded</p>
+                    </div>
+                </div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-fill" id="progressBar" style="width: 0%"></div>
+                </div>
+                <p style="text-align: center; font-size: 0.875rem; color: var(--muted-foreground); margin-top: 1rem;">
+                    100% of donations go directly to relief supplies—receipts tracked and posted publicly
+                </p>
             </div>
         </div>
-    </div>
-
-    <!-- Progress Section -->
-    <div class="progress-section">
-        <div class="container">
-            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Fundraising Progress</h3>
-            <p style="color: #666; margin-bottom: 20px;">Goal: $25,000 for immediate relief supplies</p>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressBar"></div>
-            </div>
-            <div class="progress-text">
-                <strong>$<span id="raised">0</span></strong> raised of <strong>$25,000</strong> goal
-            </div>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: #777;">100% of donations go directly to relief supplies—receipts tracked and posted publicly</p>
-        </div>
-    </div>
+    </section>
 
     <!-- Photo Gallery -->
-    <div class="gallery-section">
+    <section class="gallery-section">
         <div class="container">
-            <h2>The Devastation Is Real</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">These are raw, unedited photos showing the true extent of damage across Montego Bay. This is what my family and community are facing right now.</p>
+            <div class="section-header">
+                <h2>The Devastation is Real</h2>
+                <p>These are raw, unedited photos showing the true extent of damage across Montego Bay. This is what my family and community are facing right now.</p>
+            </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="dyAaNcRYx0gn.jpg" alt="Flooded neighborhoods">
-                    <div class="gallery-caption">Entire neighborhoods submerged under flood waters</div>
+                    <img src="dyAaNcRYx0gn.jpg" alt="Widespread flooding in residential area of Montego Bay">
+                    <p class="gallery-caption">Entire neighborhoods submerged under flood waters</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="vXQgCTP5hsFh.jpg" alt="Flooded streets">
-                    <div class="gallery-caption">Roads turned into rivers, cutting off communities</div>
+                    <img src="vXQgCTP5hsFh.jpg" alt="Flooded streets in Montego Bay with person walking through water">
+                    <p class="gallery-caption">Roads turned into rivers, cutting off communities</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="sp3crK1tXclH.jpg" alt="Family in damaged home">
-                    <div class="gallery-caption">Families struggling through muddy, destroyed streets</div>
+                    <img src="4z79FIAJdQQW.jpg" alt="Families sheltering in damaged buildings">
+                    <p class="gallery-caption">Families taking shelter in damaged buildings with no supplies</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Ncid4V3zQzfW.jpg" alt="Destroyed homes">
-                    <div class="gallery-caption">Homes destroyed, roofs torn off by 185 mph winds</div>
+                    <img src="u4ixzxwGZzGE.jpg" alt="Residents wading through flooded streets in Montego Bay">
+                    <p class="gallery-caption">Residents struggle through muddy, flooded streets</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="fp9qh91oRMJw.jpg" alt="Fallen trees">
-                    <div class="gallery-caption">Fallen trees and debris blocking roads</div>
+                    <img src="2OGX2moATsDb.jpg" alt="Aerial view of destroyed homes and buildings">
+                    <p class="gallery-caption">Homes completely destroyed, roofs torn off</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="otB7jF3zeWZJ.jpg" alt="Damaged infrastructure">
-                    <div class="gallery-caption">Power lines down, 75% still without electricity</div>
+                    <img src="Ncid4V3zQzfW.jpg" alt="Fallen trees and debris blocking roads">
+                    <p class="gallery-caption">Fallen trees and debris block main roads</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- What They Need -->
-    <div class="needs-section">
+    <section class="needs-section">
         <div class="container">
-            <h2>What Your Donation Provides</h2>
-            <p class="needs-subtitle">Every contribution helps. Anything is appreciated—no donation is too small.</p>
+            <div class="section-header">
+                <h2>What Your Donation Provides</h2>
+                <p>Every contribution helps. Anything is appreciated—no donation is too small.</p>
+            </div>
             <div class="needs-grid">
-                <div class="need-card">
-                    <div class="need-icon">💧</div>
-                    <h3>Water & Food</h3>
-                    <ul>
-                        <li>Clean drinking water</li>
-                        <li>Non-perishable food items</li>
-                        <li>Baby formula and food</li>
-                        <li>Emergency meal supplies</li>
-                    </ul>
+                <div class="card need-card">
+                    <div class="card-content">
+                        <div class="need-icon" style="background: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246);">
+                            💧
+                        </div>
+                        <h3>Water & Food</h3>
+                        <ul>
+                            <li>• Clean drinking water</li>
+                            <li>• Non-perishable food items</li>
+                            <li>• Baby formula and food</li>
+                            <li>• Emergency meal supplies</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="need-card">
-                    <div class="need-icon">👕</div>
-                    <h3>Clothing</h3>
-                    <ul>
-                        <li>Clean, dry clothes for adults and children</li>
-                        <li>Shoes and socks</li>
-                        <li>Underwear and basic garments</li>
-                        <li>Rain protection gear</li>
-                    </ul>
+                <div class="card need-card">
+                    <div class="card-content">
+                        <div class="need-icon" style="background: rgba(247, 147, 30, 0.1); color: rgb(247, 147, 30);">
+                            👕
+                        </div>
+                        <h3>Clothing</h3>
+                        <ul>
+                            <li>• Clean, dry clothes for adults and children</li>
+                            <li>• Shoes and socks</li>
+                            <li>• Underwear and basic garments</li>
+                            <li>• Rain protection gear</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="need-card">
-                    <div class="need-icon">🏠</div>
-                    <h3>Bedding & Shelter</h3>
-                    <ul>
-                        <li>Blankets and sheets</li>
-                        <li>Pillows and mattress covers</li>
-                        <li>Tarps for damaged roofs</li>
-                        <li>Mosquito nets</li>
-                    </ul>
+                <div class="card need-card">
+                    <div class="card-content">
+                        <div class="need-icon" style="background: rgba(34, 197, 94, 0.1); color: rgb(34, 197, 94);">
+                            🏠
+                        </div>
+                        <h3>Bedding & Shelter</h3>
+                        <ul>
+                            <li>• Blankets and sheets</li>
+                            <li>• Pillows and mattress covers</li>
+                            <li>• Tarps for damaged roofs</li>
+                            <li>• Mosquito nets</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="need-card">
-                    <div class="need-icon">🧴</div>
-                    <h3>Personal Care</h3>
-                    <ul>
-                        <li>Soap, shampoo, toothpaste</li>
-                        <li>Feminine hygiene products</li>
-                        <li>Baby diapers and wipes</li>
-                        <li>First aid supplies</li>
-                    </ul>
+                <div class="card need-card">
+                    <div class="card-content">
+                        <div class="need-icon" style="background: rgba(249, 115, 22, 0.1); color: rgb(249, 115, 22);">
+                            🧴
+                        </div>
+                        <h3>Personal Care</h3>
+                        <ul>
+                            <li>• Soap, shampoo, toothpaste</li>
+                            <li>• Feminine hygiene products</li>
+                            <li>• Baby diapers and wipes</li>
+                            <li>• First aid supplies</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="need-card">
-                    <div class="need-icon">🔨</div>
-                    <h3>Building Supplies</h3>
-                    <ul>
-                        <li>Nails, screws, and fasteners</li>
-                        <li>Basic hand tools</li>
-                        <li>Plywood and lumber</li>
-                        <li>Repair materials</li>
-                    </ul>
+                <div class="card need-card">
+                    <div class="card-content">
+                        <div class="need-icon" style="background: rgba(217, 119, 6, 0.1); color: rgb(217, 119, 6);">
+                            🔨
+                        </div>
+                        <h3>Building Supplies</h3>
+                        <ul>
+                            <li>• Nails, screws, and fasteners</li>
+                            <li>• Basic hand tools</li>
+                            <li>• Plywood and lumber</li>
+                            <li>• Repair materials</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="need-card highlight">
-                    <div class="need-icon">❤️</div>
-                    <h3>Anything Helps</h3>
-                    <p style="color: #555;">Every donation makes a difference. Whether it's $5 or $500, your contribution directly helps families rebuild their lives. No amount is too small.</p>
+                <div class="card need-card highlight">
+                    <div class="card-content">
+                        <div class="need-icon" style="background: rgba(247, 147, 30, 0.2); color: rgb(247, 147, 30);">
+                            ❤️
+                        </div>
+                        <h3>Anything Helps</h3>
+                        <p style="color: var(--muted-foreground);">
+                            Every donation makes a difference. Whether it's $5 or $500, your contribution directly helps families rebuild their lives. No amount is too small.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Trust Section -->
-    <div class="trust-section">
+    <!-- How to Donate -->
+    <section class="donation-section">
         <div class="container">
-            <h2>Our Commitment to Transparency</h2>
-            <div class="trust-content">
-                <p>Every dollar is accounted for with public receipt tracking. Supplies are purchased from verified vendors in Jamaica and the United States, then distributed through trusted local coordinators in Montego Bay who know which families need help most.</p>
-                <p style="margin-top: 20px;">All receipts will be saved and regular updates posted showing exactly what was purchased and who received assistance. This is my family, my community—your trust means everything to me.</p>
+            <div style="max-width: 48rem; margin: 0 auto; text-align: center;">
+                <h2 class="mb-6" style="font-size: 2.25rem;">How to Send Help Today</h2>
+                <p class="mb-12" style="font-size: 1.125rem; color: var(--muted-foreground);">
+                    Choose the donation method that works best for you. Every contribution, no matter the size, makes a real difference.
+                </p>
+                <div class="donation-grid">
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener" class="card donation-card" style="text-decoration: none; color: inherit;">
+                        <div class="card-content" style="text-align: center;">
+                            <div class="donation-icon" style="background: rgba(247, 147, 30, 0.1); color: rgb(247, 147, 30);">
+                                💳
+                            </div>
+                            <h3 style="font-weight: 700; font-size: 1.125rem; margin-bottom: 0.5rem;">Credit/Debit Card</h3>
+                            <p style="font-size: 0.875rem; color: var(--muted-foreground);">Secure payment via Stripe</p>
+                            <p style="font-size: 0.75rem; color: var(--muted-foreground); margin-top: 0.5rem;">Accepts all major cards</p>
+                        </div>
+                    </a>
+                    <div class="card donation-card donation-card-blue" style="cursor: pointer;" onclick="alert('Add your PayPal.me link here')">
+                        <div class="card-content" style="text-align: center;">
+                            <div class="donation-icon" style="background: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246);">
+                                🔗
+                            </div>
+                            <h3 style="font-weight: 700; font-size: 1.125rem; margin-bottom: 0.5rem;">PayPal</h3>
+                            <p style="font-size: 0.875rem; color: var(--muted-foreground);">Secure & instant</p>
+                            <p style="font-size: 0.75rem; color: var(--muted-foreground); margin-top: 0.5rem;">No account needed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trust-box">
+                    <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.75rem;">Our Commitment to Transparency</h3>
+                    <p style="color: var(--muted-foreground); line-height: 1.7;">
+                        Every dollar is accounted for with public receipt tracking. Supplies are purchased from verified vendors in Jamaica and the United States, then distributed through trusted local coordinators in Montego Bay who know which families need help most. All receipts will be saved and regular updates posted showing exactly what was purchased and who received assistance. This is my family, my community—your trust means everything to me.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- The Crisis -->
+    <section class="crisis-section">
+        <div class="container">
+            <div style="max-width: 56rem; margin: 0 auto;">
+                <h2 class="text-center mb-6" style="font-size: 2.25rem;">Why This Can't Wait</h2>
+                <div class="space-y-6" style="color: var(--muted-foreground); font-size: 1.125rem;">
+                    <p style="line-height: 1.7;">
+                        Hurricane Melissa made landfall on October 29, 2025 as a Category 5 storm with winds reaching 185 mph—stronger than Hurricane Katrina. It was the strongest hurricane to strike Jamaica in modern history.
+                    </p>
+                    <div class="crisis-stats">
+                        <div class="card stat-card">
+                            <div class="card-content">
+                                <p class="stat-number">75%</p>
+                                <p style="font-size: 0.875rem;">of Jamaica still without power</p>
+                            </div>
+                        </div>
+                        <div class="card stat-card">
+                            <div class="card-content">
+                                <p class="stat-number">50+</p>
+                                <p style="font-size: 0.875rem;">lives lost across the Caribbean</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="line-height: 1.7;">
+                        Montego Bay was split in two by flood waters. The mayor's immediate concern was simple: "Check if everybody is alive." Entire neighborhoods remain submerged. Communication networks are crippled. Families are sleeping in damaged buildings with roofs torn off, exposed to the elements.
+                    </p>
+                    <p style="line-height: 1.7;">
+                        My 73-year-old aunt had her roof ripped off while she sheltered with her sons and baby grandchild. Farmers have lost their entire crops—their only source of income. Children have no clean clothes. Mothers have no diapers. Families have no blankets.
+                    </p>
+                    <p style="line-height: 1.7; font-weight: 600; color: var(--foreground);">
+                        The need is immediate. The need is real. And with your help, we can provide relief today.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Final CTA -->
-    <div class="donate-section" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white;">
+    <section class="final-cta">
         <div class="container">
-            <h2 style="color: white; font-size: 2.2rem; margin-bottom: 20px;">The Need Is Immediate. The Need Is Real.</h2>
-            <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px;">And with your help, we can provide relief today.</p>
-            <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="donate-button" target="_blank" rel="noopener" style="background: white; color: #ff6b35;">
-                💝 Donate Now
-            </a>
+            <div style="max-width: 42rem; margin: 0 auto; text-align: center;">
+                <h2 class="mb-6" style="font-size: 2.25rem;">Every Dollar Brings Hope</h2>
+                <p class="mb-6" style="font-size: 1.125rem; color: var(--muted-foreground);">
+                    Your donation today will provide immediate relief to families who have lost everything. Together, we can help Montego Bay rebuild.
+                </p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="btn btn-primary" target="_blank" rel="noopener">
+                        ❤️ Donate Now
+                    </a>
+                    <button class="btn btn-outline" onclick="shareLink()">
+                        🔗 Share With Friends
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer class="footer">
         <div class="container">
-            <h3>Questions? Want to Help in Other Ways?</h3>
-            <p>Contact me directly: <a href="mailto:helpmontegobay@gmail.com">helpmontegobay@gmail.com</a></p>
-            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">This is a grassroots fundraising campaign coordinated by family members in Montego Bay with trusted local partners. All funds tracked with receipts and used exclusively for purchasing and delivering relief supplies to affected families.</p>
-            <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">© 2025 Montego Bay Hurricane Relief • All donations processed securely through Stripe</p>
+            <div class="footer-content space-y-4">
+                <h3 style="font-weight: 700; font-size: 1.125rem;">Questions? Want to Help in Other Ways?</h3>
+                <p style="color: var(--muted-foreground);">
+                    Contact me directly: <span style="font-weight: 600; color: var(--foreground);">helpmontegobay@gmail.com</span>
+                </p>
+                <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                    This is a grassroots fundraising campaign coordinated by family members in Montego Bay with trusted local partners. All funds tracked with receipts and used exclusively for purchasing and delivering relief supplies to affected families.
+                </p>
+                <div class="footer-buttons">
+                    <button class="btn btn-ghost" onclick="shareLink('Facebook')">Share on Facebook</button>
+                    <button class="btn btn-ghost" onclick="shareLink('Twitter')">Share on Twitter</button>
+                    <button class="btn btn-ghost" onclick="shareLink('WhatsApp')">Share on WhatsApp</button>
+                </div>
+            </div>
         </div>
-    </div>
+    </footer>
 
     <script>
-        // Animate progress bar on load
+        // Progress bar animation
         window.addEventListener('load', function() {
-            // You can update these values manually as donations come in
-            var raised = 0; // Update this number as donations come in
+            // Update these values as donations come in
+            var raised = 0;
             var goal = 25000;
-            var percentage = (raised / goal) * 100;
+            var percentage = Math.min((raised / goal) * 100, 100);
             
             document.getElementById('raised').textContent = raised.toLocaleString();
+            document.getElementById('percent').textContent = Math.round(percentage);
             
             setTimeout(function() {
                 document.getElementById('progressBar').style.width = percentage + '%';
             }, 500);
         });
+        
+        // Share functionality
+        function shareLink(platform) {
+            var url = window.location.href;
+            var text = 'Help Montego Bay families recover from Hurricane Melissa';
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: text,
+                    url: url
+                }).catch(function() {
+                    copyToClipboard(url);
+                });
+            } else {
+                copyToClipboard(url);
+            }
+        }
+        
+        function copyToClipboard(text) {
+            var dummy = document.createElement('textarea');
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            alert('Link copied to clipboard! Share it on ' + (arguments[1] || 'social media'));
+        }
     </script>
 </body>
 </html>
-Create a High-Converting Donation Page for Montego Bay Storm Relief - Manus
