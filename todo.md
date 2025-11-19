@@ -67,3 +67,10 @@
 - [x] Maintain articles of incorporation mission language
 - [x] Add hurricane impact details while keeping professional tone
 - [x] Update meta tags for SEO
+
+## Impact Section Updates
+- [x] Change impact metrics from past achievements to future goals
+- [x] Update to 1,000 relief kits goal
+- [x] Update to 500 households goal
+- [x] Update to 500 students goal
+- [x] Revise section header to reflect goal-oriented messaging

@@ -56,8 +56,8 @@ export default function Home() {
                   className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-card border-2 border-primary/20 rounded-xl p-6 shadow-xl max-w-xs">
-                  <p className="text-3xl font-bold text-primary mb-1">1,200+</p>
-                  <p className="text-sm text-muted-foreground">Families supported through relief programs</p>
+                  <p className="text-3xl font-bold text-primary mb-1">500</p>
+                  <p className="text-sm text-muted-foreground">Household goal for Hurricane Melissa relief</p>
                 </div>
               </div>
             </div>
@@ -177,28 +177,32 @@ export default function Home() {
         <section className="py-20 bg-primary/5">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Hurricane Relief Goals</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Transparent, measurable results driven by community partnerships and donor generosity.
+                As a newly incorporated nonprofit, we're committed to reaching these targets to help Montego Bay families recover from Hurricane Melissa. Your support brings us closer to these goals.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">1,200+</div>
-                <div className="text-sm text-muted-foreground">Relief kits distributed</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">1,000</div>
+                <div className="text-sm text-muted-foreground font-semibold">Relief Kits Goal</div>
+                <div className="text-xs text-muted-foreground mt-1">Emergency supplies for families</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">450+</div>
-                <div className="text-sm text-muted-foreground">Families supported</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500</div>
+                <div className="text-sm text-muted-foreground font-semibold">Households Goal</div>
+                <div className="text-xs text-muted-foreground mt-1">Families receiving direct aid</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">300+</div>
-                <div className="text-sm text-muted-foreground">Students receiving supplies</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500</div>
+                <div className="text-sm text-muted-foreground font-semibold">Students Goal</div>
+                <div className="text-xs text-muted-foreground mt-1">Youth receiving school supplies</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Donations to programs</div>
+                <div className="text-sm text-muted-foreground font-semibold">To Programs</div>
+                <div className="text-xs text-muted-foreground mt-1">Every dollar funds relief</div>
               </div>
             </div>
 
