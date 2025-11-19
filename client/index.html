@@ -21,6 +21,29 @@
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
       data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    
+    <!-- Progress Bar Animation -->
+    <script>
+      window.addEventListener('load', function() {
+        // Update these values as donations come in
+        var raised = 3795;
+        var goal = 25000;
+        var percentage = Math.min((raised / goal) * 100, 100);
+        
+        var raisedEl = document.getElementById('raised');
+        var percentEl = document.getElementById('percent');
+        var progressBarEl = document.getElementById('progressBar');
+        
+        if (raisedEl && percentEl && progressBarEl) {
+          raisedEl.textContent = raised.toLocaleString();
+          percentEl.textContent = Math.round(percentage);
+          
+          setTimeout(function() {
+            progressBarEl.style.width = percentage + '%';
+          }, 500);
+        }
+      });
+    </script>
   </body>
 
 </html>

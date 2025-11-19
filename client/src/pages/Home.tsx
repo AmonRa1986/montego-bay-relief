@@ -30,7 +30,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild className="text-base">
-                    <a href="#donate">Donate Now</a>
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate Now</a>
                   </Button>
                   <Button size="lg" variant="outline" asChild className="text-base">
                     <a href="#programs">Learn About Our Work</a>
@@ -52,13 +52,47 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Mission Statement Section */}
-        <section className="py-16 bg-muted/50">
-          <div className="container max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed italic font-serif">
-              "To provide humanitarian relief, emergency assistance, educational support, and community rebuilding aid to underserved families in Montego Bay, Jamaica, while fostering charitable programs and donor engagement within the United States."
-            </p>
+        {/* Progress Tracker */}
+        <section className="py-12 bg-background">
+          <div className="container">
+            <div className="max-w-2xl mx-auto bg-card border rounded-lg p-8 shadow-sm">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <p className="text-3xl font-bold">
+                    $<span id="raised">0</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground">raised of $25,000 goal</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-primary">
+                    <span id="percent">0</span>%
+                  </p>
+                  <p className="text-sm text-muted-foreground">funded</p>
+                </div>
+              </div>
+              <div className="w-full bg-muted rounded-full h-3 overflow-hidden mb-4">
+                <div
+                  id="progressBar"
+                  className="h-full bg-primary transition-all duration-1000 ease-out"
+                  style={{ width: '0%' }}
+                ></div>
+              </div>
+              <p className="text-center text-sm text-muted-foreground">
+                100% of donations go directly to relief supplies—receipts tracked and posted publicly
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+              <blockquote className="text-lg text-muted-foreground italic leading-relaxed">
+                "To provide humanitarian relief, emergency assistance, educational support, and community rebuilding aid to underserved families in Montego Bay, Jamaica, while fostering charitable programs and donor engagement within the United States."
+              </blockquote>
+            </div>
           </div>
         </section>
 
@@ -257,7 +291,7 @@ export default function Home() {
                   </div>
                 </div>
                 <Button size="lg" className="w-full" asChild>
-                  <a href="#donate">
+                  <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
                     Make a Difference Today
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -267,8 +301,77 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Food Drive Section */}
+        <section className="py-16 bg-green-50 border-t border-b">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-6">
+                  📦 Physical Donations Welcome
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">South Florida & Treasure Coast Food Drive</h2>
+                <p className="text-lg text-muted-foreground">
+                  Can't donate money? You can still help! We're organizing a food and supplies drive in South Florida and the Treasure Coast region to collect donated items for Montego Bay families.
+                </p>
+              </div>
+
+              <div className="bg-card border rounded-lg p-6 mb-6">
+                <h3 className="text-xl font-bold mb-4 text-green-700">What We're Collecting:</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl flex-shrink-0">🥫</span>
+                    <div>
+                      <strong>Non-Perishable Food:</strong> Canned goods, rice, beans, pasta, baby formula, protein bars
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl flex-shrink-0">💧</span>
+                    <div>
+                      <strong>Water & Beverages:</strong> Bottled water, electrolyte drinks, juice boxes
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl flex-shrink-0">👕</span>
+                    <div>
+                      <strong>Clothing:</strong> New or gently used clothes (all sizes), shoes, blankets, bedding
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl flex-shrink-0">🧴</span>
+                    <div>
+                      <strong>Personal Care:</strong> Soap, toothpaste, diapers, feminine hygiene products, first aid supplies
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl flex-shrink-0">🔨</span>
+                    <div>
+                      <strong>Building Supplies:</strong> Tarps, nails, screws, hammers, basic tools, flashlights, batteries
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-amber-50 border-2 border-amber-300 rounded-lg p-6 text-center">
+                <h3 className="text-xl font-bold mb-3">How to Donate Items</h3>
+                <p className="text-muted-foreground mb-4">
+                  We're currently organizing collection points in South Florida and the Treasure Coast. Drop-off locations and dates will be announced soon.
+                </p>
+                <p className="font-semibold text-lg mb-2">
+                  Contact us to donate items or volunteer:
+                </p>
+                <a href="mailto:helpmontegobayrelief@gmail.com" className="text-primary font-semibold text-lg underline">
+                  helpmontegobayrelief@gmail.com
+                </a>
+                <p className="text-sm text-muted-foreground mt-4">
+                  We'll coordinate pickup or provide drop-off locations in your area.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Donation CTA Section */}
-        <section id="donate" className="py-20 bg-gradient-to-br from-primary to-primary/80 text-white">
+        <section id="donate" className="py-20 bg-primary text-primary-foreground">
           <div className="container max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Support Changes Lives</h2>
             <p className="text-lg mb-8 opacity-90">
@@ -297,11 +400,15 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-base font-bold">
-                Make a One-Time Donation
+              <Button size="lg" variant="secondary" className="text-base font-bold" asChild>
+                <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
+                  Make a One-Time Donation
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-base font-bold bg-white/10 border-white/30 hover:bg-white/20 text-white">
-                Become a Monthly Donor
+              <Button size="lg" variant="outline" className="text-base font-bold bg-white/10 border-white/30 hover:bg-white/20 text-white" asChild>
+                <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
+                  Become a Monthly Donor
+                </a>
               </Button>
             </div>
 

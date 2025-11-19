@@ -32,7 +32,7 @@ export default function Header() {
             Contact
           </Link>
           <Button asChild className="ml-4">
-            <a href="#donate">Donate Now</a>
+            <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate Now</a>
           </Button>
         </nav>
 
@@ -66,7 +66,7 @@ export default function Header() {
               Contact
             </Link>
             <Button asChild className="w-full">
-              <a href="#donate">Donate Now</a>
+              <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate Now</a>
             </Button>
           </nav>
         </div>

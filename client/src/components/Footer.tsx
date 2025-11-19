@@ -48,7 +48,7 @@ export default function Footer() {
               <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                 Contact Us
               </Link>
-              <a href="#donate" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 Donate
               </a>
             </nav>
