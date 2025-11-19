@@ -185,7 +185,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">1,000</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500</div>
                 <div className="text-sm text-muted-foreground font-semibold">Relief Kits Goal</div>
                 <div className="text-xs text-muted-foreground mt-1">Emergency supplies for families</div>
               </div>
@@ -195,7 +195,7 @@ export default function Home() {
                 <div className="text-xs text-muted-foreground mt-1">Families receiving direct aid</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">300</div>
                 <div className="text-sm text-muted-foreground font-semibold">Students Goal</div>
                 <div className="text-xs text-muted-foreground mt-1">Youth receiving school supplies</div>
               </div>
@@ -293,7 +293,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold">Join Our Community</h3>
                 </div>
                 <p className="text-muted-foreground mb-6">
-                  Become part of a growing network of donors, volunteers, and partners committed to building hope in Montego Bay.
+                  Become part of a growing network of donors, volunteers, and partners committed to rebuilding in Montego Bay.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-sm">
