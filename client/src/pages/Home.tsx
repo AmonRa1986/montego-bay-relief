@@ -3,32 +3,44 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { Heart, GraduationCap, Home as HomeIcon, Users, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead />
       <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-b from-primary/5 to-background py-20 md:py-32">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge variant="secondary" className="mb-6 text-sm font-semibold">
+                <div className="space-y-2 mb-4">
+                <span className="inline-block px-3 py-1 bg-destructive/90 text-destructive-foreground text-sm font-bold rounded-full animate-pulse">
+                  🚨 URGENT: Hurricane Relief Needed
+                </span>
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full ml-2">
                   Incorporated Nonprofit | 501(c)(3) Pending
-                </Badge>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Building Hope in Montego Bay, Jamaica
-                </h1>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Montego Bay Relief, Inc. provides humanitarian relief, educational support, and community rebuilding aid to underserved families in Montego Bay, Jamaica. We partner with local leaders to deliver dignity-centered assistance that creates lasting change.
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Help Montego Bay Families Rebuild After Hurricane Melissa
+              </h1>
+              <div className="space-y-4 text-base md:text-lg text-muted-foreground mb-8">
+                <p>
+                  <strong>Families in Montego Bay, Jamaica have lost everything to Hurricane Melissa</strong>—the strongest Category 5 storm to hit Jamaica in modern history. Homes destroyed. No power. No clean water. Families sleeping in damaged shelters without basic necessities.
                 </p>
-                <p className="text-base font-semibold mb-8">
-                  Your support today brings immediate relief and builds sustainable futures for families in need.
+                <p className="text-base font-semibold text-foreground">
+                  <strong>Montego Bay Relief, Inc.</strong> is a U.S.-incorporated nonprofit founded by individuals with deep family roots in Montego Bay. This is our home, our community, our family. We provide humanitarian relief, educational support, and community rebuilding aid to help our neighbors recover and thrive.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <p className="text-base font-semibold text-foreground">
+                  Every dollar you give goes directly to purchasing and delivering clothing, bedding, clean water, food, and personal care items to families who have nowhere else to turn.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild className="text-base">
                     <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate Now</a>
                   </Button>
@@ -88,10 +100,13 @@ export default function Home() {
         <section className="py-16 bg-muted/30">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-              <blockquote className="text-lg text-muted-foreground italic leading-relaxed">
+              <h2 className="text-3xl font-bold mb-6">Our Mission: Jamaica Disaster Relief & Community Development</h2>
+              <blockquote className="text-lg text-muted-foreground italic leading-relaxed mb-6">
                 "To provide humanitarian relief, emergency assistance, educational support, and community rebuilding aid to underserved families in Montego Bay, Jamaica, while fostering charitable programs and donor engagement within the United States."
               </blockquote>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Montego Bay Relief, Inc.</strong> is a U.S.-incorporated 501(c)(3) pending nonprofit organization dedicated to Caribbean hurricane recovery and long-term community development in Jamaica. Founded by individuals with deep family roots in Montego Bay, we understand the unique challenges facing Jamaican communities and work directly with local coordinators to ensure disaster relief reaches those who need it most. Our Jamaica humanitarian aid programs focus on emergency relief, educational resources for youth, and sustainable community rebuilding efforts throughout the Montego Bay area and surrounding parishes.
+              </p>
             </div>
           </div>
         </section>
@@ -100,9 +115,9 @@ export default function Home() {
         <section id="programs" className="py-20">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Programs</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Hurricane Relief & Community Development Programs</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                We deliver comprehensive support through three core programs designed to meet immediate needs and build long-term resilience.
+                We deliver comprehensive Jamaica disaster relief and humanitarian aid through three core programs designed to meet immediate hurricane recovery needs and build long-term community resilience in Montego Bay and surrounding areas.
               </p>
             </div>
 
@@ -113,9 +128,9 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                     <Heart className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Humanitarian Relief Kits</h3>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    Providing families with hygiene kits, first-aid supplies, clean water, and household essentials through partnerships with local community centers and churches.
+                  <h3 className="text-xl font-bold mb-3">Hurricane Relief Kits & Emergency Aid</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Providing Hurricane Melissa-affected families in Montego Bay with critical hygiene kits, first aid supplies, clean water, food, clothing, bedding, and household essentials. Our Jamaica disaster relief program works with trusted local coordinators to ensure emergency aid reaches families most impacted by the Category 5 hurricane.
                   </p>
                   <div className="flex items-center gap-2 text-sm font-semibold text-primary">
                     <span>50% of total budget</span>
@@ -129,9 +144,9 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-6">
                     <GraduationCap className="h-7 w-7 text-[oklch(0.75_0.15_70)]" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">School Supplies & Education</h3>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    Distributing backpacks, notebooks, tablets, uniforms, and classroom materials to students ages 5-18, partnering with local schools to improve educational readiness.
+                  <h3 className="text-xl font-bold mb-3">School Supplies & Educational Support</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Helping Montego Bay students recover from hurricane disruptions by distributing backpacks, notebooks, tablets, uniforms, and learning materials. Our Jamaica educational aid program supports teachers with classroom resources to ensure youth can continue their education despite hurricane damage to schools and homes.
                   </p>
                   <div className="flex items-center gap-2 text-sm font-semibold text-[oklch(0.75_0.15_70)]">
                     <span>25% of total budget</span>
@@ -145,9 +160,9 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-full bg-[oklch(0.35_0.08_130)]/10 flex items-center justify-center mb-6">
                     <HomeIcon className="h-7 w-7 text-[oklch(0.35_0.08_130)]" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Community Rebuilding</h3>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    Supporting safe living conditions through building materials, minor repairs to homes and schools, and coordinated volunteer labor with local partners.
+                  <h3 className="text-xl font-bold mb-3">Community Rebuilding & Hurricane Recovery</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Supporting Caribbean hurricane recovery by providing building materials, tools, and construction support to Montego Bay families. Our Jamaica community development program helps repair homes, schools, and community centers damaged by Hurricane Melissa, working toward long-term resilience and sustainable rebuilding.
                   </p>
                   <div className="flex items-center gap-2 text-sm font-semibold text-[oklch(0.35_0.08_130)]">
                     <span>25% of total budget</span>
