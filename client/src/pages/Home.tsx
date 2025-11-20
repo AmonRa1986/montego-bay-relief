@@ -51,8 +51,8 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="/hero_families.jpg"
-                  alt="Jamaican mother and child - Fresh Start Jamaica"
+                  src="/hero_community.jpeg"
+                  alt="Community members in Montego Bay, Jamaica"
                   className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-card border-2 border-primary/20 rounded-xl p-6 shadow-xl max-w-xs">

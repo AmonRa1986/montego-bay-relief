@@ -92,3 +92,6 @@
 - [x] Replace 500 Household Goal hero image with native Jamaican women
 - [x] Search for appropriate replacement images
 - [x] Update website with selected images
+
+## Hero Image Restoration
+- [x] Restore original hero image (before Fresh Start Jamaica image)
