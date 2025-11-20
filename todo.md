@@ -118,3 +118,8 @@
 - [x] Add emotionally compelling stories from Westgreen, Black River, and Montego Bay
 - [x] Create "Stories from the Ground" section on Impact page
 - [x] Ensure stories drive emotion and show urgency of relief needs
+
+## Icon Branding Updates
+- [x] Update Programs page icons with brand colors (teal/gold/green)
+- [x] Update About page icons with brand colors (teal/gold/green)
+- [x] Ensure color application is tasteful and professional

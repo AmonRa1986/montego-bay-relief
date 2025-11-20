@@ -32,8 +32,8 @@ export default function Programs() {
             <div className="grid lg:grid-cols-3 gap-8 mb-16">
               <Card className="border-primary/20">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Package className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-[#008B8B]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Package className="h-8 w-8 text-[#008B8B]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">50%</h3>
                   <p className="text-sm text-muted-foreground">Emergency Relief Kits</p>
@@ -42,8 +42,8 @@ export default function Programs() {
 
               <Card className="border-secondary/20">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <GraduationCap className="h-8 w-8 text-secondary" />
+                  <div className="w-16 h-16 bg-[#F7A520]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <GraduationCap className="h-8 w-8 text-[#F7A520]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">25%</h3>
                   <p className="text-sm text-muted-foreground">Education Support</p>
@@ -52,8 +52,8 @@ export default function Programs() {
 
               <Card className="border-accent/20">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Home className="h-8 w-8 text-accent-foreground" />
+                  <div className="w-16 h-16 bg-[#2D5016]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Home className="h-8 w-8 text-[#2D5016]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">25%</h3>
                   <p className="text-sm text-muted-foreground">Community Rebuilding</p>
@@ -66,8 +66,8 @@ export default function Programs() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Package className="h-8 w-8 text-primary" />
+                    <div className="p-3 bg-[#008B8B]/10 rounded-lg">
+                      <Package className="h-8 w-8 text-[#008B8B]" />
                     </div>
                     <h2 className="text-3xl font-bold">Emergency Relief Kits</h2>
                   </div>
@@ -78,23 +78,23 @@ export default function Programs() {
                   <h3 className="font-bold text-lg mb-3">What's Included:</h3>
                   <ul className="space-y-2 text-muted-foreground mb-6">
                     <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
+                      <span className="text-[#008B8B] mt-1">•</span>
                       <span><strong>Food staples:</strong> Rice, beans, canned goods, cooking oil (2-week supply for family of 4)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
+                      <span className="text-[#008B8B] mt-1">•</span>
                       <span><strong>Water purification:</strong> Filtration tablets and storage containers</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
+                      <span className="text-[#008B8B] mt-1">•</span>
                       <span><strong>Hygiene supplies:</strong> Soap, toothpaste, sanitary products, diapers</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
+                      <span className="text-[#008B8B] mt-1">•</span>
                       <span><strong>First aid:</strong> Bandages, antiseptic, pain relievers, prescription support</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
+                      <span className="text-[#008B8B] mt-1">•</span>
                       <span><strong>Emergency shelter:</strong> Tarps, rope, flashlights, batteries</span>
                     </li>
                   </ul>
@@ -134,8 +134,8 @@ export default function Programs() {
 
                 <div className="order-1 md:order-2">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-secondary/10 rounded-lg">
-                      <GraduationCap className="h-8 w-8 text-secondary" />
+                    <div className="p-3 bg-[#F7A520]/10 rounded-lg">
+                      <GraduationCap className="h-8 w-8 text-[#F7A520]" />
                     </div>
                     <h2 className="text-3xl font-bold">Education Support</h2>
                   </div>
@@ -146,19 +146,19 @@ export default function Programs() {
                   <h3 className="font-bold text-lg mb-3">What We Provide:</h3>
                   <ul className="space-y-2 text-muted-foreground mb-6">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">•</span>
+                      <span className="text-[#F7A520] mt-1">•</span>
                       <span><strong>School supply kits:</strong> Notebooks, pens, pencils, backpacks, uniforms</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">•</span>
+                      <span className="text-[#F7A520] mt-1">•</span>
                       <span><strong>Textbook replacement:</strong> Core curriculum books lost in flooding</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">•</span>
+                      <span className="text-[#F7A520] mt-1">•</span>
                       <span><strong>Technology access:</strong> Tablets and internet hotspots for remote learning</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">•</span>
+                      <span className="text-[#F7A520] mt-1">•</span>
                       <span><strong>Tuition assistance:</strong> Emergency grants for families unable to pay school fees</span>
                     </li>
                   </ul>
@@ -182,8 +182,8 @@ export default function Programs() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
-                      <Home className="h-8 w-8 text-accent-foreground" />
+                    <div className="p-3 bg-[#2D5016]/10 rounded-lg">
+                      <Home className="h-8 w-8 text-[#2D5016]" />
                     </div>
                     <h2 className="text-3xl font-bold">Community Rebuilding</h2>
                   </div>
@@ -194,19 +194,19 @@ export default function Programs() {
                   <h3 className="font-bold text-lg mb-3">Our Focus Areas:</h3>
                   <ul className="space-y-2 text-muted-foreground mb-6">
                     <li className="flex items-start gap-2">
-                      <span className="text-accent-foreground mt-1">•</span>
+                      <span className="text-[#2D5016] mt-1">•</span>
                       <span><strong>Home repairs:</strong> Roofing materials, tools, and skilled labor for damaged homes</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent-foreground mt-1">•</span>
+                      <span className="text-[#2D5016] mt-1">•</span>
                       <span><strong>Small business recovery:</strong> Grants and equipment for local vendors and entrepreneurs</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent-foreground mt-1">•</span>
+                      <span className="text-[#2D5016] mt-1">•</span>
                       <span><strong>Community infrastructure:</strong> Water systems, sanitation, and public spaces</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent-foreground mt-1">•</span>
+                      <span className="text-[#2D5016] mt-1">•</span>
                       <span><strong>Disaster preparedness:</strong> Training and supplies for future hurricane seasons</span>
                     </li>
                   </ul>

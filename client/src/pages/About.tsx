@@ -33,8 +33,8 @@ export default function About() {
               <Card>
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Target className="h-6 w-6 text-primary" />
+                    <div className="p-3 bg-[#008B8B]/10 rounded-lg">
+                      <Target className="h-6 w-6 text-[#008B8B]" />
                     </div>
                     <h2 className="text-2xl font-bold">Our Mission</h2>
                   </div>
@@ -47,8 +47,8 @@ export default function About() {
               <Card>
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-secondary/10 rounded-lg">
-                      <Heart className="h-6 w-6 text-secondary" />
+                    <div className="p-3 bg-[#F7A520]/10 rounded-lg">
+                      <Heart className="h-6 w-6 text-[#F7A520]" />
                     </div>
                     <h2 className="text-2xl font-bold">Our Vision</h2>
                   </div>
@@ -87,8 +87,8 @@ export default function About() {
               <Card className="border-primary/20">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Shield className="h-8 w-8 text-primary" />
+                    <div className="p-3 bg-[#008B8B]/10 rounded-lg">
+                      <Shield className="h-8 w-8 text-[#008B8B]" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-bold mb-3">501(c)(3) Tax-Exempt Status Pending</h2>
@@ -114,7 +114,7 @@ export default function About() {
           <div className="container">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <Users className="h-8 w-8 text-primary" />
+                <Users className="h-8 w-8 text-[#008B8B]" />
                 <h2 className="text-3xl font-bold">Board of Directors</h2>
               </div>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -125,11 +125,11 @@ export default function About() {
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">JD</span>
+                  <div className="w-20 h-20 bg-[#008B8B]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-[#008B8B]">JD</span>
                   </div>
                   <h3 className="font-bold text-lg mb-1">John Doe</h3>
-                  <p className="text-sm text-primary mb-3">President & Founder</p>
+                  <p className="text-sm text-[#008B8B] mb-3">President & Founder</p>
                   <p className="text-sm text-muted-foreground">
                     Montego Bay native with 15+ years in nonprofit management and community development.
                   </p>
@@ -138,11 +138,11 @@ export default function About() {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-secondary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-secondary">JS</span>
+                  <div className="w-20 h-20 bg-[#F7A520]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-[#F7A520]">JS</span>
                   </div>
                   <h3 className="font-bold text-lg mb-1">Jane Smith</h3>
-                  <p className="text-sm text-primary mb-3">Treasurer</p>
+                  <p className="text-sm text-[#008B8B] mb-3">Treasurer</p>
                   <p className="text-sm text-muted-foreground">
                     CPA with expertise in nonprofit financial management and regulatory compliance.
                   </p>
@@ -151,11 +151,11 @@ export default function About() {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-accent/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-accent-foreground">MB</span>
+                  <div className="w-20 h-20 bg-[#2D5016]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-[#2D5016]">MB</span>
                   </div>
                   <h3 className="font-bold text-lg mb-1">Maria Brown</h3>
-                  <p className="text-sm text-primary mb-3">Secretary</p>
+                  <p className="text-sm text-[#008B8B] mb-3">Secretary</p>
                   <p className="text-sm text-muted-foreground">
                     Community organizer and educator with deep roots in the Montego Bay area.
                   </p>
@@ -177,8 +177,8 @@ export default function About() {
             <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="h-8 w-8 text-primary" />
+                <div className="w-16 h-16 bg-[#008B8B]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#008B8B]" />
                 </div>
                 <h3 className="font-bold mb-2">Transparency</h3>
                 <p className="text-sm text-muted-foreground">
@@ -187,8 +187,8 @@ export default function About() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-secondary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-secondary" />
+                <div className="w-16 h-16 bg-[#F7A520]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-[#F7A520]" />
                 </div>
                 <h3 className="font-bold mb-2">Community-Led</h3>
                 <p className="text-sm text-muted-foreground">
@@ -207,8 +207,8 @@ export default function About() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Target className="h-8 w-8 text-primary" />
+                <div className="w-16 h-16 bg-[#2D5016]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Target className="h-8 w-8 text-[#2D5016]" />
                 </div>
                 <h3 className="font-bold mb-2">Impact</h3>
                 <p className="text-sm text-muted-foreground">
