@@ -74,3 +74,15 @@
 - [x] Update to 500 households goal
 - [x] Update to 500 students goal
 - [x] Revise section header to reflect goal-oriented messaging
+
+## Monthly Donation Integration
+- [x] Update "Become a Monthly Donor" button with new Stripe subscription link
+- [x] Test monthly donation flow
+
+## Tiered Monthly Donation System
+- [x] Verify Supporter tier link ($25/month)
+- [x] Verify Advocate tier link ($50/month)
+- [x] Verify Champion tier link ($100/month)
+- [x] Create tiered donation selection UI on website
+- [x] Replace generic "Become a Monthly Donor" button with tier options
+- [x] Test all three subscription flows

@@ -418,17 +418,116 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-base font-bold" asChild>
+            {/* One-Time Donation Button */}
+            <div className="flex justify-center mb-8">
+              <Button size="lg" variant="secondary" className="text-base font-bold px-8" asChild>
                 <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
                   Make a One-Time Donation
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-base font-bold bg-white/10 border-white/30 hover:bg-white/20 text-white" asChild>
-                <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
-                  Become a Monthly Donor
-                </a>
-              </Button>
+            </div>
+
+            {/* Monthly Donation Tiers */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold mb-3 text-center">Become a Monthly Donor</h3>
+              <p className="text-center opacity-90 mb-8">Join our community of sustaining supporters with recurring monthly giving</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {/* Supporter Tier */}
+                <div className="bg-white/10 backdrop-blur rounded-xl p-6 border-2 border-white/20 hover:border-white/40 transition-all hover:scale-105">
+                  <div className="text-center mb-4">
+                    <div className="text-sm font-semibold uppercase tracking-wide opacity-75 mb-2">Supporter</div>
+                    <div className="text-4xl font-bold mb-1">$25</div>
+                    <div className="text-sm opacity-75">per month</div>
+                  </div>
+                  <ul className="space-y-3 mb-6 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Provide relief kits for families</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Quarterly impact updates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Tax-deductible receipts</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full" variant="secondary" asChild>
+                    <a href="https://buy.stripe.com/4gMfZifbB5Yy64I7wP63K03" target="_blank" rel="noopener noreferrer">
+                      Choose Supporter
+                    </a>
+                  </Button>
+                </div>
+
+                {/* Advocate Tier */}
+                <div className="bg-white/10 backdrop-blur rounded-xl p-6 border-2 border-accent hover:border-accent/80 transition-all hover:scale-105 relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-accent text-accent-foreground px-4 py-1 rounded-full text-xs font-bold uppercase">Popular</span>
+                  </div>
+                  <div className="text-center mb-4">
+                    <div className="text-sm font-semibold uppercase tracking-wide opacity-75 mb-2">Advocate</div>
+                    <div className="text-4xl font-bold mb-1">$50</div>
+                    <div className="text-sm opacity-75">per month</div>
+                  </div>
+                  <ul className="space-y-3 mb-6 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Support education & rebuilding</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Monthly impact reports with photos</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Recognition on website</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>All Supporter benefits</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full" variant="secondary" asChild>
+                    <a href="https://buy.stripe.com/aFaeVegfFfz80KobN563K04" target="_blank" rel="noopener noreferrer">
+                      Choose Advocate
+                    </a>
+                  </Button>
+                </div>
+
+                {/* Champion Tier */}
+                <div className="bg-white/10 backdrop-blur rounded-xl p-6 border-2 border-white/20 hover:border-white/40 transition-all hover:scale-105">
+                  <div className="text-center mb-4">
+                    <div className="text-sm font-semibold uppercase tracking-wide opacity-75 mb-2">Champion</div>
+                    <div className="text-4xl font-bold mb-1">$100</div>
+                    <div className="text-sm opacity-75">per month</div>
+                  </div>
+                  <ul className="space-y-3 mb-6 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Maximum impact across all programs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Personal thank-you from leadership</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>Featured donor recognition</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                      <span>All Advocate benefits</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full" variant="secondary" asChild>
+                    <a href="https://buy.stripe.com/eVq5kE3sT1Ii78M9EX63K05" target="_blank" rel="noopener noreferrer">
+                      Choose Champion
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
 
             <p className="text-sm mt-6 opacity-75">
