@@ -32,11 +32,11 @@ export default function Contact() {
             <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Mail className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-[#008B8B]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Mail className="h-8 w-8 text-[#008B8B]" />
                   </div>
                   <h3 className="font-bold mb-2">Email Us</h3>
-                  <a href="mailto:info@montegobayrelief.org" className="text-sm text-primary hover:underline">
+                  <a href="mailto:info@montegobayrelief.org" className="text-sm text-[#008B8B] hover:underline">
                     info@montegobayrelief.org
                   </a>
                   <p className="text-xs text-muted-foreground mt-2">
@@ -47,11 +47,11 @@ export default function Contact() {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Phone className="h-8 w-8 text-secondary" />
+                  <div className="w-16 h-16 bg-[#F7A520]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Phone className="h-8 w-8 text-[#F7A520]" />
                   </div>
                   <h3 className="font-bold mb-2">Call Us</h3>
-                  <a href="tel:+1234567890" className="text-sm text-primary hover:underline">
+                  <a href="tel:+1234567890" className="text-sm text-[#008B8B] hover:underline">
                     +1 (234) 567-8900
                   </a>
                   <p className="text-xs text-muted-foreground mt-2">
@@ -62,8 +62,8 @@ export default function Contact() {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <MapPin className="h-8 w-8 text-accent-foreground" />
+                  <div className="w-16 h-16 bg-[#2D5016]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <MapPin className="h-8 w-8 text-[#2D5016]" />
                   </div>
                   <h3 className="font-bold mb-2">Mailing Address</h3>
                   <p className="text-sm text-muted-foreground">
@@ -88,7 +88,7 @@ export default function Contact() {
           <div className="container">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <Building2 className="h-12 w-12 text-primary mx-auto mb-4" />
+                <Building2 className="h-12 w-12 text-[#008B8B] mx-auto mb-4" />
                 <h2 className="text-3xl font-bold mb-4">Partnership Opportunities</h2>
                 <p className="text-muted-foreground">
                   We're actively seeking corporate partners, foundations, and organizations committed to supporting Hurricane Melissa relief efforts in Jamaica.
@@ -99,8 +99,8 @@ export default function Contact() {
                 <Card>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Building2 className="h-6 w-6 text-primary" />
+                      <div className="p-2 bg-[#008B8B]/10 rounded-lg">
+                        <Building2 className="h-6 w-6 text-[#008B8B]" />
                       </div>
                       <div>
                         <h3 className="font-bold mb-2">Corporate Partnerships</h3>
@@ -121,8 +121,8 @@ export default function Contact() {
                 <Card>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-secondary/10 rounded-lg">
-                        <Heart className="h-6 w-6 text-secondary" />
+                      <div className="p-2 bg-[#F7A520]/10 rounded-lg">
+                        <Heart className="h-6 w-6 text-[#F7A520]" />
                       </div>
                       <div>
                         <h3 className="font-bold mb-2">Foundation Grants</h3>
@@ -143,8 +143,8 @@ export default function Contact() {
                 <Card>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-accent/10 rounded-lg">
-                        <Users className="h-6 w-6 text-accent-foreground" />
+                      <div className="p-2 bg-[#2D5016]/10 rounded-lg">
+                        <Users className="h-6 w-6 text-[#2D5016]" />
                       </div>
                       <div>
                         <h3 className="font-bold mb-2">Community Organizations</h3>
@@ -165,8 +165,8 @@ export default function Contact() {
                 <Card>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <MapPin className="h-6 w-6 text-primary" />
+                      <div className="p-2 bg-[#008B8B]/10 rounded-lg">
+                        <MapPin className="h-6 w-6 text-[#008B8B]" />
                       </div>
                       <div>
                         <h3 className="font-bold mb-2">Jamaica-Based Partners</h3>
@@ -204,7 +204,7 @@ export default function Contact() {
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-8">
-                <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+                <Users className="h-12 w-12 text-[#F7A520] mx-auto mb-4" />
                 <h2 className="text-3xl font-bold mb-4">Volunteer With Us</h2>
                 <p className="text-muted-foreground">
                   We're building a network of dedicated volunteers in South Florida and Jamaica to support our relief distribution efforts.
