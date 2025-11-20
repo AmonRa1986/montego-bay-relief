@@ -86,3 +86,9 @@
 - [x] Create tiered donation selection UI on website
 - [x] Replace generic "Become a Monthly Donor" button with tier options
 - [x] Test all three subscription flows
+
+## Image Replacements
+- [x] Replace Community-Led Distribution image (remove IRFC branded boxes)
+- [x] Replace 500 Household Goal hero image with native Jamaican women
+- [x] Search for appropriate replacement images
+- [x] Update website with selected images

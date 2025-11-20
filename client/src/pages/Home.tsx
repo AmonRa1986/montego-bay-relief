@@ -51,8 +51,8 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="/hero_community.jpeg"
-                  alt="Community members in Montego Bay, Jamaica"
+                  src="/hero_families.jpg"
+                  alt="Jamaican mother and child - Fresh Start Jamaica"
                   className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-card border-2 border-primary/20 rounded-xl p-6 shadow-xl max-w-xs">
@@ -226,8 +226,8 @@ export default function Home() {
               <Card>
                 <CardContent className="p-0">
                   <img
-                    src="/relief_supplies.jpeg"
-                    alt="Relief supplies being distributed to community"
+                    src="/community_distribution.jpg"
+                    alt="Community volunteers organizing relief supplies and donations"
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
                   <div className="p-6">
