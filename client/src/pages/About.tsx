@@ -126,12 +126,12 @@ export default function About() {
               <Card>
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 bg-[#008B8B]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-[#008B8B]">JD</span>
+                    <span className="text-2xl font-bold text-[#008B8B]">DH</span>
                   </div>
-                  <h3 className="font-bold text-lg mb-1">John Doe</h3>
+                  <h3 className="font-bold text-lg mb-1">Duke Hines</h3>
                   <p className="text-sm text-[#008B8B] mb-3">President & Founder</p>
                   <p className="text-sm text-muted-foreground">
-                    Montego Bay native with 15+ years in nonprofit management and community development.
+                    Retired electrical contractor born and raised in Jamaica. After a distinguished career in Florida, Duke returned home to Montego Bay where he has resided for over 10 years. His deep roots in the community and commitment to rebuilding his homeland drive our mission forward.
                   </p>
                 </CardContent>
               </Card>
@@ -139,12 +139,12 @@ export default function About() {
               <Card>
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 bg-[#F7A520]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-[#F7A520]">JS</span>
+                    <span className="text-2xl font-bold text-[#F7A520]">NM</span>
                   </div>
-                  <h3 className="font-bold text-lg mb-1">Jane Smith</h3>
+                  <h3 className="font-bold text-lg mb-1">Neil Martin</h3>
                   <p className="text-sm text-[#008B8B] mb-3">Treasurer</p>
                   <p className="text-sm text-muted-foreground">
-                    CPA with expertise in nonprofit financial management and regulatory compliance.
+                    Jamaican-born financial expert with over 20 years of experience in financial management. Now residing in the United States, Neil brings rigorous fiscal oversight and nonprofit financial expertise to ensure every dollar serves our mission with integrity.
                   </p>
                 </CardContent>
               </Card>
@@ -152,22 +152,18 @@ export default function About() {
               <Card>
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 bg-[#2D5016]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-[#2D5016]">MB</span>
+                    <span className="text-2xl font-bold text-[#2D5016]">SH</span>
                   </div>
-                  <h3 className="font-bold text-lg mb-1">Maria Brown</h3>
-                  <p className="text-sm text-[#008B8B] mb-3">Secretary</p>
+                  <h3 className="font-bold text-lg mb-1">Shomari Hines</h3>
+                  <p className="text-sm text-[#008B8B] mb-3">Executive Director</p>
                   <p className="text-sm text-muted-foreground">
-                    Community organizer and educator with deep roots in the Montego Bay area.
+                    Brings over 10 years of community outreach and program development experience, combined with a decade as a senior marketing manager specializing in public relations. Shomari's strategic vision and grassroots expertise ensure our programs reach those who need them most.
                   </p>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="text-center mt-8">
-              <p className="text-sm text-muted-foreground italic">
-                Note: Board member names and details are placeholder examples. Please update with actual board information.
-              </p>
-            </div>
+
           </div>
         </section>
 
