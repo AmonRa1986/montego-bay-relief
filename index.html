@@ -3,911 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Montego Bay Families Recover from Hurricane Melissa</title>
+    <title>Montego Bay Relief, Inc. - Hurricane Melissa Disaster Relief</title>
+    <meta name="description" content="Montego Bay Relief, Inc. provides emergency disaster relief and community development to families affected by Hurricane Melissa in Jamaica. 501(c)(3) pending nonprofit.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: hsl(28, 100%, 60%);
-            --primary-foreground: hsl(0, 0%, 100%);
-            --background: hsl(28, 100%, 98%);
-            --foreground: hsl(28, 10%, 15%);
-            --card: hsl(0, 0%, 100%);
-            --card-foreground: hsl(28, 10%, 15%);
-            --muted: hsl(28, 20%, 95%);
-            --muted-foreground: hsl(28, 10%, 45%);
-            --accent: hsl(150, 60%, 45%);
-            --accent-foreground: hsl(0, 0%, 100%);
-            --destructive: hsl(0, 84%, 60%);
-            --destructive-foreground: hsl(0, 0%, 98%);
-            --border: hsl(28, 20%, 88%);
-            --radius: 0.65rem;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--foreground);
-            background: var(--background);
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
-        /* Button Styles */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: var(--radius);
-            font-weight: 600;
-            transition: all 0.2s;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
-        .btn-primary {
-            background: var(--primary);
-            color: var(--primary-foreground);
-            padding: 1.25rem 2rem;
-            font-size: 1.125rem;
-            box-shadow: 0 10px 30px rgba(247, 147, 30, 0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(247, 147, 30, 0.4);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            color: var(--foreground);
-            border: 2px solid var(--border);
-            padding: 1.25rem 2rem;
-            font-size: 1.125rem;
-        }
-        
-        .btn-outline:hover {
-            background: var(--muted);
-        }
-        
-        .btn-ghost {
-            background: transparent;
-            color: var(--muted-foreground);
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-        }
-        
-        .btn-ghost:hover {
-            background: var(--muted);
-        }
-        
-        /* Card Styles */
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-        
-        .card-content {
-            padding: 1.5rem;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(to bottom, rgba(247, 147, 30, 0.05), var(--background));
-            padding: 4rem 0 6rem;
-        }
-        
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        @media (min-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        .urgent-badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--destructive);
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.75rem);
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero-text {
-            font-size: 1.125rem;
-            color: var(--muted-foreground);
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-        
-        .hero-text-bold {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--foreground);
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-top: 1rem;
-        }
-        
-        @media (min-width: 640px) {
-            .hero-buttons {
-                flex-direction: row;
-            }
-        }
-        
-        .hero-image-wrapper {
-            position: relative;
-        }
-        
-        .hero-image {
-            width: 100%;
-            border-radius: calc(var(--radius) * 2);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .hero-stat-card {
-            position: absolute;
-            bottom: -1.5rem;
-            left: -1.5rem;
-            background: var(--card);
-            padding: 1.5rem;
-            border-radius: var(--radius);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            border: 2px solid rgba(247, 147, 30, 0.2);
-            max-width: 18rem;
-        }
-        
-        @media (max-width: 1024px) {
-            .hero-stat-card {
-                position: static;
-                margin-top: 1.5rem;
-                max-width: 100%;
-            }
-        }
-        
-        /* Progress Section */
-        .progress-section {
-            padding: 3rem 0;
-            background: var(--card);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .progress-container {
-            max-width: 56rem;
-            margin: 0 auto;
-        }
-        
-        .progress-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .progress-bar-wrapper {
-            width: 100%;
-            background: var(--muted);
-            border-radius: 9999px;
-            height: 1rem;
-            overflow: hidden;
-        }
-        
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            border-radius: 9999px;
-            transition: width 0.5s ease;
-        }
-        
-        /* Photo Gallery */
-        .gallery-section {
-            padding: 4rem 0 6rem;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-header h2 {
-            font-size: clamp(1.875rem, 4vw, 2.5rem);
-            margin-bottom: 1rem;
-        }
-        
-        .section-header p {
-            font-size: 1.125rem;
-            color: var(--muted-foreground);
-            max-width: 42rem;
-            margin: 0 auto;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        @media (min-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        .gallery-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 16rem;
-            object-fit: cover;
-            border-radius: var(--radius);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .gallery-caption {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-        }
-        
-        /* Needs Section */
-        .needs-section {
-            padding: 4rem 0 6rem;
-            background: rgba(247, 147, 30, 0.03);
-        }
-        
-        .needs-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            max-width: 75rem;
-            margin: 0 auto;
-        }
-        
-        @media (min-width: 768px) {
-            .needs-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .needs-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        .need-card {
-            border: 2px solid var(--border);
-            transition: border-color 0.3s;
-        }
-        
-        .need-card:hover {
-            border-color: rgba(247, 147, 30, 0.5);
-        }
-        
-        .need-card.highlight {
-            border-color: rgba(247, 147, 30, 0.3);
-            background: rgba(247, 147, 30, 0.05);
-        }
-        
-        .need-card.highlight:hover {
-            border-color: rgba(247, 147, 30, 0.6);
-        }
-        
-        .need-icon {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 9999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .need-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .need-card ul {
-            list-style: none;
-            color: var(--muted-foreground);
-        }
-        
-        .need-card li {
-            padding: 0.25rem 0;
-        }
-        
-        /* Donation Section */
-        .donation-section {
-            padding: 4rem 0 6rem;
-        }
-        
-        .donation-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 42rem;
-            margin: 0 auto 3rem;
-        }
-        
-        @media (min-width: 640px) {
-            .donation-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        .donation-card {
-            border: 2px solid rgba(247, 147, 30, 0.2);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .donation-card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .donation-card-blue {
-            border-color: rgba(59, 130, 246, 0.2);
-        }
-        
-        .donation-icon {
-            width: 4rem;
-            height: 4rem;
-            border-radius: 9999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
-        }
-        
-        .trust-box {
-            background: rgba(247, 147, 30, 0.05);
-            border-radius: var(--radius);
-            padding: 2rem;
-            border: 2px solid rgba(247, 147, 30, 0.2);
-        }
-        
-        /* Crisis Section */
-        .crisis-section {
-            padding: 4rem 0 6rem;
-            background: linear-gradient(to bottom, rgba(247, 147, 30, 0.03), var(--background));
-        }
-        
-        .crisis-stats {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        @media (min-width: 768px) {
-            .crisis-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        .stat-card {
-            background: rgba(239, 68, 68, 0.05);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-        }
-        
-        .stat-number {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--destructive);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Final CTA */
-        .final-cta {
-            padding: 4rem 0 6rem;
-            background: rgba(247, 147, 30, 0.05);
-        }
-        
-        /* Footer */
-        .footer {
-            padding: 3rem 0;
-            background: var(--card);
-            border-top: 1px solid var(--border);
-        }
-        
-        .footer-content {
-            max-width: 56rem;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .footer-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        /* Icon Styles */
-        .icon {
-            width: 1.25rem;
-            height: 1.25rem;
-            display: inline-block;
-            margin-right: 0.5rem;
-        }
-        
-        /* Utility Classes */
-        .text-center { text-align: center; }
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-6 { margin-bottom: 1.5rem; }
-        .mb-12 { margin-bottom: 3rem; }
-        .mt-4 { margin-top: 1rem; }
-        .space-y-4 > * + * { margin-top: 1rem; }
-        .space-y-6 > * + * { margin-top: 1.5rem; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <img src="logo_horizontal.png" alt="Montego Bay Relief" class="logo">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="btn btn-primary" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-grid">
+            <div class="hero-content">
                 <div>
-                    <div class="urgent-badge">
-                        🚨 URGENT: Hurricane Relief Needed
+                    <div>
+                        <span class="badge badge-urgent">🚨 URGENT: Hurricane Relief Needed</span>
+                        <span class="badge badge-status">Incorporated Nonprofit | 501(c)(3) Pending</span>
                     </div>
                     <h1>Help Montego Bay Families Rebuild After Hurricane Melissa</h1>
-                    <p class="hero-text">
-                        Families in Montego Bay, Jamaica have lost everything to Hurricane Melissa—the strongest storm to hit Jamaica in modern history. Homes destroyed. No power. No clean water. Families sleeping in damaged shelters without basic necessities.
-                    </p>
-                    <p class="hero-text-bold">
-                        They urgently need clothing, bedding, and personal care items to survive. Every dollar you give goes directly to purchasing and delivering these essentials to families who have nowhere else to turn.
-                    </p>
+                    <p><strong>Families in Montego Bay, Jamaica have lost everything to Hurricane Melissa</strong>—the strongest Category 5 storm to hit Jamaica in modern history. Homes destroyed. No power. No clean water. Families sleeping in damaged shelters without basic necessities.</p>
+                    <p><strong>Montego Bay Relief, Inc.</strong> is a U.S.-incorporated nonprofit founded by individuals with deep family roots in Montego Bay. This is our home, our community, our family. We provide humanitarian relief, educational support, and community rebuilding aid to help our neighbors recover and thrive.</p>
+                    <p>Every dollar you give goes directly to purchasing and delivering clothing, bedding, clean water, food, and personal care items to families who have nowhere else to turn.</p>
                     <div class="hero-buttons">
-                        <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="btn btn-primary" target="_blank" rel="noopener">
-                            ❤️ Donate Now
-                        </a>
-                        <button class="btn btn-outline" onclick="shareLink()">
-                            🔗 Share This Campaign
-                        </button>
+                        <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="btn btn-primary" target="_blank">Donate Now</a>
+                        <a href="programs.html" class="btn btn-outline">Learn About Our Work</a>
                     </div>
                 </div>
-                <div class="hero-image-wrapper">
-                    <img src="an-aerial-view-of-black-river.jpg" alt="Aerial view of flooding in Montego Bay from Hurricane Melissa" class="hero-image">
-                    <div class="hero-stat-card">
-                        <p style="font-size: 0.875rem; font-weight: 600; color: var(--muted-foreground); margin-bottom: 0.25rem;">Category 5 Hurricane</p>
-                        <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem;">185 mph winds</p>
-                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">Stronger than Hurricane Katrina</p>
-                    </div>
+                <div>
+                    <img src="hero_community.jpeg" alt="Community members in Montego Bay, Jamaica" class="hero-image">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Progress Tracker -->
-    <section class="progress-section">
+    <section>
         <div class="container">
             <div class="progress-container">
-                <div class="progress-header">
-                    <div>
-                        <p style="font-size: 1.875rem; font-weight: 700;">$<span id="raised">0</span></p>
-                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">raised of $25,000 goal</p>
+                <div class="progress-stats">
+                    <div class="progress-stat">
+                        <h3>$<span id="raised">3,795</span></h3>
+                        <p>raised of $25,000 goal</p>
                     </div>
-                    <div style="text-align: right;">
-                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--accent);"><span id="percent">0</span>%</p>
-                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">funded</p>
+                    <div class="progress-stat text-center">
+                        <h3><span id="percent">15</span>%</h3>
+                        <p>funded</p>
                     </div>
                 </div>
-                <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill" id="progressBar" style="width: 0%"></div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar" style="width: 15%"></div>
                 </div>
-                <p style="text-align: center; font-size: 0.875rem; color: var(--muted-foreground); margin-top: 1rem;">
-                    100% of donations go directly to relief supplies—receipts tracked and posted publicly
-                </p>
+                <p class="text-center" style="color: #666; font-size: 0.9rem;">100% of donations go directly to relief supplies—receipts tracked and posted publicly</p>
             </div>
         </div>
     </section>
 
-    <!-- Photo Gallery -->
-    <section class="gallery-section">
+    <!-- Mission Section -->
+    <section class="section-gray">
         <div class="container">
-            <div class="section-header">
-                <h2>The Devastation is Real</h2>
-                <p>These are raw, unedited photos showing the true extent of damage across Montego Bay. This is what my family and community are facing right now.</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="damaged-infrastructure.jpg" alt="Widespread flooding in residential area of Montego Bay">
-                    <p class="gallery-caption">Entire neighborhoods submerged under flood waters</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="flooded-streets.jpg" alt="Flooded streets in Montego Bay with person walking through water">
-                    <p class="gallery-caption">Roads turned into rivers, cutting off communities</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="family-in-damaged-home.jpg" alt="Man on damaged buildings">
-                    <p class="gallery-caption">Man standing on damaged buildings with no supplies</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="flooded-neighborhoods.jpg" alt="Residents wading through flooded streets in Montego Bay">
-                    <p class="gallery-caption">Residents struggle through muddy, flooded streets</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="an-aerial-view-of-black-river.jpg" alt="Aerial view of destroyed homes and buildings">
-                    <p class="gallery-caption">Homes completely destroyed, roofs torn off</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="fallen-trees.jpg" alt="Fallen trees and debris blocking roads">
-                    <p class="gallery-caption">Fallen trees and debris block main roads</p>
-                </div>
-            </div>
+            <h2>Our Mission: Jamaica Disaster Relief & Community Development</h2>
+            <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; color: #666;">Montego Bay Relief, Inc. is a U.S.-incorporated nonprofit organization (501c3 pending) dedicated to providing emergency disaster relief and sustainable community development in Montego Bay, Jamaica, and the surrounding St. James Parish region.</p>
+            <p style="max-width: 800px; margin: 2rem auto 0; text-align: center; font-size: 1.1rem; color: #666;">Founded in response to the devastating impact of Hurricane Melissa, our mission is to support Jamaican families through immediate humanitarian aid and long-term rebuilding initiatives. We focus on three core programs: Emergency Relief Kits (50% of resources), Education Support (25%), and Community Rebuilding (25%).</p>
         </div>
     </section>
 
-    <!-- What They Need -->
-    <section class="needs-section">
+    <!-- Programs Preview -->
+    <section>
         <div class="container">
-            <div class="section-header">
-                <h2>What Your Donation Provides</h2>
-                <p>Every contribution helps. Anything is appreciated—no donation is too small.</p>
-            </div>
-            <div class="needs-grid">
-                <div class="card need-card">
-                    <div class="card-content">
-                        <div class="need-icon" style="background: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246);">
-                            💧
-                        </div>
-                        <h3>Water & Food</h3>
-                        <ul>
-                            <li>• Clean drinking water</li>
-                            <li>• Non-perishable food items</li>
-                            <li>• Baby formula and food</li>
-                            <li>• Emergency meal supplies</li>
-                        </ul>
-                    </div>
+            <h2>Hurricane Relief & Community Development Programs</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"></path>
+                    </svg>
+                    <h3>Hurricane Relief Kits & Emergency Aid</h3>
+                    <p>Immediate disaster relief providing food, water, hygiene supplies, and shelter materials to families who lost everything to Hurricane Melissa. 50% of all resources dedicated to emergency response.</p>
+                    <a href="programs.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More</a>
                 </div>
-                <div class="card need-card">
-                    <div class="card-content">
-                        <div class="need-icon" style="background: rgba(247, 147, 30, 0.1); color: rgb(247, 147, 30);">
-                            👕
-                        </div>
-                        <h3>Clothing</h3>
-                        <ul>
-                            <li>• Clean, dry clothes for adults and children</li>
-                            <li>• Shoes and socks</li>
-                            <li>• Underwear and basic garments</li>
-                            <li>• Rain protection gear</li>
-                        </ul>
-                    </div>
+                <div class="card">
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    <h3>School Supplies & Educational Support</h3>
+                    <p>Ensuring children can continue their education after the hurricane by providing school supplies, uniforms, and learning resources. Supporting 300 students across Montego Bay schools.</p>
+                    <a href="programs.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More</a>
                 </div>
-                <div class="card need-card">
-                    <div class="card-content">
-                        <div class="need-icon" style="background: rgba(34, 197, 94, 0.1); color: rgb(34, 197, 94);">
-                            🏠
-                        </div>
-                        <h3>Bedding & Shelter</h3>
-                        <ul>
-                            <li>• Blankets and sheets</li>
-                            <li>• Pillows and mattress covers</li>
-                            <li>• Tarps for damaged roofs</li>
-                            <li>• Mosquito nets</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card need-card">
-                    <div class="card-content">
-                        <div class="need-icon" style="background: rgba(249, 115, 22, 0.1); color: rgb(249, 115, 22);">
-                            🧴
-                        </div>
-                        <h3>Personal Care</h3>
-                        <ul>
-                            <li>• Soap, shampoo, toothpaste</li>
-                            <li>• Feminine hygiene products</li>
-                            <li>• Baby diapers and wipes</li>
-                            <li>• First aid supplies</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card need-card">
-                    <div class="card-content">
-                        <div class="need-icon" style="background: rgba(217, 119, 6, 0.1); color: rgb(217, 119, 6);">
-                            🔨
-                        </div>
-                        <h3>Building Supplies</h3>
-                        <ul>
-                            <li>• Nails, screws, and fasteners</li>
-                            <li>• Basic hand tools</li>
-                            <li>• Plywood and lumber</li>
-                            <li>• Repair materials</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card need-card highlight">
-                    <div class="card-content">
-                        <div class="need-icon" style="background: rgba(247, 147, 30, 0.2); color: rgb(247, 147, 30);">
-                            ❤️
-                        </div>
-                        <h3>Anything Helps</h3>
-                        <p style="color: var(--muted-foreground);">
-                            Every donation makes a difference. Whether it's $5 or $500, your contribution directly helps families rebuild their lives. No amount is too small.
-                        </p>
-                    </div>
+                <div class="card">
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                    </svg>
+                    <h3>Community Rebuilding & Home Repairs</h3>
+                    <p>Long-term rebuilding support including home repairs, business recovery, and infrastructure restoration. Helping families rebuild their lives and livelihoods with dignity.</p>
+                    <a href="programs.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How to Donate -->
-    <section class="donation-section">
+    <!-- Impact Goals -->
+    <section class="section-gray">
         <div class="container">
-            <div style="max-width: 48rem; margin: 0 auto; text-align: center;">
-                <h2 class="mb-6" style="font-size: 2.25rem;">How to Send Help Today</h2>
-                <p class="mb-12" style="font-size: 1.125rem; color: var(--muted-foreground);">
-                    Every contribution, no matter the size, makes a real difference in helping families rebuild their lives.
-                </p>
-                <div style="max-width: 24rem; margin: 0 auto;">
-                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener" class="card donation-card" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="card-content" style="text-align: center;">
-                            <div class="donation-icon" style="background: rgba(247, 147, 30, 0.1); color: rgb(247, 147, 30);">
-                                💳
-                            </div>
-                            <h3 style="font-weight: 700; font-size: 1.125rem; margin-bottom: 0.5rem;">Donate Now</h3>
-                            <p style="font-size: 0.875rem; color: var(--muted-foreground);">Secure payment via Stripe</p>
-                            <p style="font-size: 0.75rem; color: var(--muted-foreground); margin-top: 0.5rem;">Accepts all major credit & debit cards</p>
-                        </div>
-                    </a>
+            <h2>Our Hurricane Relief Goals</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">We're committed to reaching these goals to support families devastated by Hurricane Melissa. Every donation brings us closer to helping our community rebuild.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500</h3>
+                    <p>Relief Kits Distributed</p>
                 </div>
-                <div class="trust-box">
-                    <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.75rem;">Our Commitment to Transparency</h3>
-                    <p style="color: var(--muted-foreground); line-height: 1.7;">
-                        Every dollar is accounted for with public receipt tracking. Supplies are purchased from verified vendors in Jamaica and the United States, then distributed through trusted local coordinators in Montego Bay who know which families need help most. All receipts will be saved and regular updates posted showing exactly what was purchased and who received assistance. This is my family, my community—your trust means everything to me.
-                    </p>
+                <div class="stat-item">
+                    <h3>500</h3>
+                    <p>Households Supported</p>
+                </div>
+                <div class="stat-item">
+                    <h3>300</h3>
+                    <p>Students Receiving Supplies</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Donations to Programs</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Food Drive Section -->
-    <section style="padding: 4rem 0; background: rgba(34, 197, 94, 0.05); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <!-- Donation Tiers -->
+    <section>
         <div class="container">
-            <div style="max-width: 56rem; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(34, 197, 94, 0.1); color: rgb(34, 197, 94); border-radius: 9999px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">
-                        📦 Physical Donations Welcome
-                    </div>
-                    <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">South Florida & Treasure Coast Food Drive</h2>
-                    <p style="font-size: 1.125rem; color: var(--muted-foreground); line-height: 1.7;">
-                        Can't donate money? You can still help! We're organizing a food and supplies drive in South Florida and the Treasure Coast region to collect donated items for Montego Bay families.
-                    </p>
-                </div>
-
-                <div class="card" style="margin-bottom: 2rem;">
-                    <div class="card-content">
-                        <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent);">What We're Collecting:</h3>
-                        <div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-bottom: 1.5rem;">
-                            <div style="display: flex; align-items: start; gap: 0.75rem;">
-                                <span style="font-size: 1.25rem; flex-shrink: 0;">🥫</span>
-                                <div>
-                                    <strong>Non-Perishable Food:</strong> Canned goods, rice, beans, pasta, baby formula, protein bars
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: start; gap: 0.75rem;">
-                                <span style="font-size: 1.25rem; flex-shrink: 0;">💧</span>
-                                <div>
-                                    <strong>Water & Beverages:</strong> Bottled water, electrolyte drinks, juice boxes
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: start; gap: 0.75rem;">
-                                <span style="font-size: 1.25rem; flex-shrink: 0;">👕</span>
-                                <div>
-                                    <strong>Clothing:</strong> New or gently used clothes (all sizes), shoes, blankets, bedding
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: start; gap: 0.75rem;">
-                                <span style="font-size: 1.25rem; flex-shrink: 0;">🧴</span>
-                                <div>
-                                    <strong>Personal Care:</strong> Soap, toothpaste, diapers, feminine hygiene products, first aid supplies
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: start; gap: 0.75rem;">
-                                <span style="font-size: 1.25rem; flex-shrink: 0;">🔨</span>
-                                <div>
-                                    <strong>Building Supplies:</strong> Tarps, nails, screws, hammers, basic tools, flashlights, batteries
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="background: rgba(247, 147, 30, 0.05); border: 2px solid rgba(247, 147, 30, 0.3);">
-                    <div class="card-content" style="text-align: center;">
-                        <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.75rem;">How to Donate Items</h3>
-                        <p style="color: var(--muted-foreground); margin-bottom: 1rem; line-height: 1.7;">
-                            We're currently organizing collection points in South Florida and the Treasure Coast. Drop-off locations and dates will be announced soon.
-                        </p>
-                        <p style="font-weight: 600; font-size: 1.125rem; margin-bottom: 0.5rem;">
-                            Contact us to donate items or volunteer:
-                        </p>
-                        <a href="mailto:helpmontegobay@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1.125rem;">
-                            helpmontegobay@gmail.com
-                        </a>
-                        <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-top: 1rem;">
-                            We'll coordinate pickup or provide drop-off locations in your area.
-                        </p>
-                    </div>
-                </div>
+            <h2>Your Support Changes Lives</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">Every contribution makes a real difference. Choose how you'd like to help Montego Bay families rebuild.</p>
+            
+            <h3 style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">One-Time Donation</h3>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" class="btn btn-primary" target="_blank" style="font-size: 1.2rem; padding: 16px 40px;">Make a One-Time Donation</a>
+                <p style="margin-top: 1rem; color: #666;">Every $25 provides one complete relief kit with food, water, and essential supplies</p>
             </div>
-        </div>
-    </section>
 
-    <!-- The Crisis -->
-    <section class="crisis-section">
-        <div class="container">
-            <div style="max-width: 56rem; margin: 0 auto;">
-                <h2 class="text-center mb-6" style="font-size: 2.25rem;">Why This Can't Wait</h2>
-                <div class="space-y-6" style="color: var(--muted-foreground); font-size: 1.125rem;">
-                    <p style="line-height: 1.7;">
-                        Hurricane Melissa made landfall on October 29, 2025 as a Category 5 storm with winds reaching 185 mph—stronger than Hurricane Katrina. It was the strongest hurricane to strike Jamaica in modern history.
-                    </p>
-                    <div class="crisis-stats">
-                        <div class="card stat-card">
-                            <div class="card-content">
-                                <p class="stat-number">75%</p>
-                                <p style="font-size: 0.875rem;">of Jamaica still without power</p>
-                            </div>
-                        </div>
-                        <div class="card stat-card">
-                            <div class="card-content">
-                                <p class="stat-number">50+</p>
-                                <p style="font-size: 0.875rem;">lives lost across the Caribbean</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p style="line-height: 1.7;">
-                        Montego Bay was split in two by flood waters. The mayor's immediate concern was simple: "Check if everybody is alive." Entire neighborhoods remain submerged. Communication networks are crippled. Families are sleeping in damaged buildings with roofs torn off, exposed to the elements.
-                    </p>
-                    <p style="line-height: 1.7;">
-                        Many with their roof ripped off while. Farmers have lost their entire crops—their only source of income. Children have no clean clothes. Mothers have no diapers. Families have no blankets.
-                    </p>
-                    <p style="line-height: 1.7; font-weight: 600; color: var(--foreground);">
-                        The need is immediate. The need is real. And with your help, we can provide relief today.
-                    </p>
+            <h3 style="text-align: center; margin-bottom: 2rem;">Become a Monthly Donor</h3>
+            <div class="tier-grid">
+                <div class="tier-card">
+                    <h4 class="tier-name">Supporter</h4>
+                    <div class="tier-price">$25<span style="font-size: 1rem; color: #666;">/month</span></div>
+                    <ul class="tier-benefits">
+                        <li>Provide 1 relief kit per month</li>
+                        <li>Monthly impact updates</li>
+                        <li>Donor recognition</li>
+                        <li>Tax-deductible receipt</li>
+                    </ul>
+                    <a href="https://donate.stripe.com/28o00k8Nd3Qq4WA8wx" class="btn btn-primary" target="_blank">Become a Supporter</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div style="max-width: 42rem; margin: 0 auto; text-align: center;">
-                <h2 class="mb-6" style="font-size: 2.25rem;">Every Dollar Brings Hope</h2>
-                <p class="mb-6" style="font-size: 1.125rem; color: var(--muted-foreground);">
-                    Your donation today will provide immediate relief to families who have lost everything. Together, we can help Montego Bay rebuild.
-                </p>
-                <div class="hero-buttons" style="justify-content: center;">
-                    <a href="https://buy.stripe.com/4gMeVe6F5ev4gJmbN563K01" class="btn btn-primary" target="_blank" rel="noopener">
-                        ❤️ Donate Now
-                    </a>
-                    <button class="btn btn-outline" onclick="shareLink()">
-                        🔗 Share With Friends
-                    </button>
+                <div class="tier-card">
+                    <h4 class="tier-name">Advocate</h4>
+                    <div class="tier-price">$50<span style="font-size: 1rem; color: #666;">/month</span></div>
+                    <ul class="tier-benefits">
+                        <li>Support 2 families per month</li>
+                        <li>Quarterly impact reports</li>
+                        <li>Exclusive donor updates</li>
+                        <li>Priority event invitations</li>
+                    </ul>
+                    <a href="https://donate.stripe.com/fZe5lG4wX5Yy8cQdQT" class="btn btn-primary" target="_blank">Become an Advocate</a>
+                </div>
+                <div class="tier-card">
+                    <h4 class="tier-name">Champion</h4>
+                    <div class="tier-price">$100<span style="font-size: 1rem; color: #666;">/month</span></div>
+                    <ul class="tier-benefits">
+                        <li>Support 4 families per month</li>
+                        <li>Personal impact stories</li>
+                        <li>Annual donor appreciation</li>
+                        <li>Partnership opportunities</li>
+                    </ul>
+                    <a href="https://donate.stripe.com/aEU00k6F52Mm1KocMQ" class="btn btn-primary" target="_blank">Become a Champion</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content space-y-4">
-                <h3 style="font-weight: 700; font-size: 1.125rem;">Questions? Want to Help in Other Ways?</h3>
-                <p style="color: var(--muted-foreground);">
-                    Contact me directly: <span style="font-weight: 600; color: var(--foreground);">helpmontegobay@gmail.com</span>
-                </p>
-                <p style="font-size: 0.875rem; color: var(--muted-foreground);">
-                    This is a grassroots fundraising campaign coordinated by family members in Montego Bay with trusted local partners. All funds tracked with receipts and used exclusively for purchasing and delivering relief supplies to affected families.
-                </p>
-                <div class="footer-buttons">
-                    <button class="btn btn-ghost" onclick="shareLink('Facebook')">Share on Facebook</button>
-                    <button class="btn btn-ghost" onclick="shareLink('Twitter')">Share on Twitter</button>
-                    <button class="btn btn-ghost" onclick="shareLink('WhatsApp')">Share on WhatsApp</button>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Montego Bay Relief, Inc.</h4>
+                    <p>A U.S.-incorporated nonprofit organization providing emergency disaster relief and community development in Montego Bay, Jamaica.</p>
+                    <p style="margin-top: 1rem;"><strong>501(c)(3) Status: Pending</strong></p>
                 </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="impact.html">Impact Stories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Email: info@montegobayrelief.org</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: [Your Address]</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank">Donate Now</a></li>
+                        <li><a href="contact.html">Volunteer</a></li>
+                        <li><a href="contact.html">Corporate Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Montego Bay Relief, Inc. All rights reserved. | EIN: [Pending] | 501(c)(3) Status: Pending</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">Donations are tax-deductible to the extent allowed by law upon 501(c)(3) approval.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Progress bar animation
+        // Animate progress bar on page load
         window.addEventListener('load', function() {
-            // Update these values as donations come in
-            var raised = 3795;
-            var goal = 25000;
-            var percentage = Math.min((raised / goal) * 100, 100);
-            
-            document.getElementById('raised').textContent = raised.toLocaleString();
-            document.getElementById('percent').textContent = Math.round(percentage);
+            const raised = 3795;
+            const goal = 25000;
+            const percent = Math.round((raised / goal) * 100);
             
             setTimeout(function() {
-                document.getElementById('progressBar').style.width = percentage + '%';
+                document.getElementById('raised').textContent = raised.toLocaleString();
+                document.getElementById('percent').textContent = percent;
+                document.getElementById('progressBar').style.width = percent + '%';
             }, 500);
         });
-        
-        // Share functionality
-        function shareLink(platform) {
-            var url = window.location.href;
-            var text = 'Help Montego Bay families recover from Hurricane Melissa';
-            
-            if (navigator.share) {
-                navigator.share({
-                    title: text,
-                    url: url
-                }).catch(function() {
-                    copyToClipboard(url);
-                });
-            } else {
-                copyToClipboard(url);
-            }
-        }
-        
-        function copyToClipboard(text) {
-            var dummy = document.createElement('textarea');
-            document.body.appendChild(dummy);
-            dummy.value = text;
-            dummy.select();
-            document.execCommand('copy');
-            document.body.removeChild(dummy);
-            alert('Link copied to clipboard! Share it on ' + (arguments[1] || 'social media'));
-        }
     </script>
 </body>
 </html>
