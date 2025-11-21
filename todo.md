@@ -44,3 +44,9 @@
 - [x] Add real Board of Directors to footer (Barry Harvey, Mark Harvey, Khadijah Hines)
 - [x] Rebuild production files
 - [x] Package updated files for deployment
+
+## GitHub Pages SPA Routing Fix
+- [x] Create 404.html redirect file for client-side routing
+- [x] Add redirect handler script to index.html
+- [x] Rebuild production files with 404.html
+- [x] Package updated files for deployment
