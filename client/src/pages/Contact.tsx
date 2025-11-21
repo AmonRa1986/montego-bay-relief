@@ -51,8 +51,8 @@ export default function Contact() {
                     <Phone className="h-8 w-8 text-[#F7A520]" />
                   </div>
                   <h3 className="font-bold mb-2">Call Us</h3>
-                  <a href="tel:+1234567890" className="text-sm text-[#008B8B] hover:underline">
-                    +1 (234) 567-8900
+                  <a href="tel:631-388-1917" className="text-sm text-[#008B8B] hover:underline">
+                    (631) 388-1917
                   </a>
                   <p className="text-xs text-muted-foreground mt-2">
                     Mon-Fri, 9am-5pm EST
@@ -67,8 +67,8 @@ export default function Contact() {
                   </div>
                   <h3 className="font-bold mb-2">Mailing Address</h3>
                   <p className="text-sm text-muted-foreground">
-                    123 Relief Way<br />
-                    Miami, FL 33101<br />
+                    909 Angle Road<br />
+                    Fort Pierce, FL 34947<br />
                     United States
                   </p>
                 </CardContent>
@@ -76,8 +76,8 @@ export default function Contact() {
             </div>
 
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-sm text-muted-foreground italic">
-                Note: Contact information above is placeholder. Please update with actual nonprofit contact details.
+              <p className="text-sm text-muted-foreground">
+                We typically respond to all inquiries within 24-48 hours. For urgent matters, please call us directly.
               </p>
             </div>
           </div>

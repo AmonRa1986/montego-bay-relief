@@ -54,25 +54,31 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Board of Directors Column */}
+          {/* Leadership Column */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Board of Directors</h3>
-            <div className="text-sm text-muted-foreground space-y-2">
+            <h3 className="font-bold text-lg mb-4">Leadership</h3>
+            <div className="text-sm text-muted-foreground space-y-3">
               <div>
-                <p className="font-semibold text-foreground">Duke Hines</p>
-                <p className="text-xs">President</p>
+                <p className="font-semibold text-foreground mb-1">Officers</p>
+                <div className="space-y-1">
+                  <div>
+                    <p className="text-xs"><span className="font-medium text-foreground">Duke Hines</span> - President & Founder</p>
+                  </div>
+                  <div>
+                    <p className="text-xs"><span className="font-medium text-foreground">Neil Martin</span> - Treasurer</p>
+                  </div>
+                  <div>
+                    <p className="text-xs"><span className="font-medium text-foreground">Shomari Hines</span> - Executive Director</p>
+                  </div>
+                </div>
               </div>
               <div>
-                <p className="font-semibold text-foreground">Shomari Hines</p>
-                <p className="text-xs">Executive Director</p>
-              </div>
-              <div>
-                <p className="font-semibold text-foreground">Khadijah Hines</p>
-                <p className="text-xs">Secretary</p>
-              </div>
-              <div className="mt-4">
-                <p className="font-semibold text-foreground">Directors:</p>
-                <p className="text-xs">Barry Harvey, Neil Martin, Mark Harvey</p>
+                <p className="font-semibold text-foreground mb-1">Board of Directors</p>
+                <div className="space-y-1">
+                  <p className="text-xs">Barry Harvey</p>
+                  <p className="text-xs">Mark Harvey</p>
+                  <p className="text-xs">Khadijah Hines</p>
+                </div>
               </div>
             </div>
           </div>

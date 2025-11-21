@@ -115,10 +115,10 @@ export default function About() {
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Users className="h-8 w-8 text-[#008B8B]" />
-                <h2 className="text-3xl font-bold">Board of Directors</h2>
+                <h2 className="text-3xl font-bold">Our Officers</h2>
               </div>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Our board brings deep community ties, nonprofit expertise, and a shared commitment to serving Montego Bay families with integrity and transparency.
+                Our leadership team brings deep community ties, nonprofit expertise, and a shared commitment to serving Montego Bay families with integrity and transparency.
               </p>
             </div>
 
