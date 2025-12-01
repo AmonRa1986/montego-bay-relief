@@ -67,10 +67,10 @@ export default function About() {
                   Montego Bay Relief, Inc. was born from a deeply personal connection to the Montego Bay community. When Hurricane Melissa devastated Jamaica in 2024, we witnessed firsthand the urgent need for coordinated, transparent relief efforts that truly serve the people most affected.
                 </p>
                 <p>
-                  What began as a small grassroots effort to support families in our home community has grown into an incorporated nonprofit organization. We have homes in Montego Bay and understand the unique challenges facing families in the region. Our approach is rooted in cultural understanding, local partnerships, and a commitment to ensuring every dollar donated directly supports relief and rebuilding efforts.
+                   What began as a small grassroots effort to support families in our home community is growing into a formal nonprofit organization. We have homes in Montego Bay and understand the unique challenges facing families in the region. Our approach is rooted in cultural understanding, local partnerships, and a commitment to ensuring every dollar donated directly supports relief and rebuilding efforts.
                 </p>
                 <p>
-                  As a newly incorporated nonprofit with pending 501(c)(3) status, we are building a sustainable organization that can respond to immediate crises while investing in long-term community development. Our programs focus on emergency relief kits, educational support for students, and community rebuilding initiatives that empower local leaders and volunteers.
+                   As an organization in formation, we are building a sustainable nonprofit that can respond to immediate crises while investing in long-term community development. Our programs focus on emergency relief kits, educational support for students, and community rebuilding initiatives that empower local leaders and volunteers.
                 </p>
                 <p>
                   We believe in radical transparency, hyper-local focus, and the power of community-led solutions. Every distribution is coordinated with local leaders, every program is designed with input from beneficiaries, and every donor receives clear reporting on how their contribution makes an impact.
@@ -91,15 +91,15 @@ export default function About() {
                       <Shield className="h-8 w-8 text-[#008B8B]" />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold mb-3">501(c)(3) Tax-Exempt Status Pending</h2>
+                      <h2 className="text-2xl font-bold mb-3">Organization in Formation</h2>
                       <p className="text-muted-foreground mb-4">
-                        Montego Bay Relief, Inc. is an incorporated nonprofit organization that has applied for 501(c)(3) tax-exempt status with the Internal Revenue Service. Our application is currently pending approval.
+                        Montego Bay Relief is a nonprofit organization currently in formation. We are building a platform to provide food and essential support to communities in need. Our Florida incorporation filings are underway, and we will pursue federal 501(c)(3) status upon approval.
                       </p>
                       <p className="text-muted-foreground mb-4">
-                        <strong>What this means for donors:</strong> While our 501(c)(3) application is under review, donations may not yet be tax-deductible. Once our status is approved, we will notify all donors and provide documentation for tax purposes. We are committed to full compliance with IRS regulations and nonprofit best practices.
+                        <strong>What this means for donors:</strong> As we are in formation, donations are not yet tax-deductible. We are committed to transparency throughout our formation process and will update our status as we complete incorporation and pursue 501(c)(3) approval. Every dollar donated goes directly toward relief efforts in Montego Bay.
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        <strong>EIN:</strong> [To be added] | <strong>Incorporation Date:</strong> 2024 | <strong>State:</strong> Florida
+                        <strong>Status:</strong> Formation in progress | <strong>Planned State:</strong> Florida | <strong>Target:</strong> 501(c)(3) nonprofit
                       </p>
                     </div>
                   </div>

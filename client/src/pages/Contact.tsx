@@ -272,7 +272,7 @@ export default function Contact() {
                   <CardContent className="p-6">
                     <h3 className="font-bold mb-2">Are donations tax-deductible?</h3>
                     <p className="text-sm text-muted-foreground">
-                      Montego Bay Relief, Inc. has applied for 501(c)(3) tax-exempt status with the IRS. While our application is pending, donations may not yet be tax-deductible. Once approved, we will notify all donors and provide documentation for tax purposes.
+                      Montego Bay Relief is currently in formation. Donations are not yet tax-deductible as we are completing our Florida incorporation and will pursue 501(c)(3) status. We are committed to transparency and will notify all donors when our tax-exempt status is approved.
                     </p>
                   </CardContent>
                 </Card>
