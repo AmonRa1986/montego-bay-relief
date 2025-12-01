@@ -23,7 +23,7 @@ export default function Home() {
                   🚨 URGENT: Hurricane Relief Needed
                 </span>
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full ml-2">
-                  Incorporated Nonprofit | 501(c)(3) Pending
+                  Organization in Formation
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
