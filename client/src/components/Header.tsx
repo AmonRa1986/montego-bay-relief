@@ -31,9 +31,14 @@ export default function Header() {
           <Link href="/contact" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
             Contact
           </Link>
-          <Button asChild className="ml-4">
-            <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate Now</a>
-          </Button>
+          <div className="ml-4 flex gap-2">
+            <Button asChild size="sm">
+              <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Stripe</a>
+            </Button>
+            <Button asChild size="sm" className="bg-[#0070ba] hover:bg-[#005ea6] text-white">
+              <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">PayPal</a>
+            </Button>
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -65,9 +70,14 @@ export default function Header() {
             <Link href="/contact" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
               Contact
             </Link>
-            <Button asChild className="w-full">
-              <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate Now</a>
-            </Button>
+            <div className="flex flex-col gap-2">
+              <Button asChild className="w-full">
+                <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate with Stripe</a>
+              </Button>
+              <Button asChild className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white">
+                <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">Donate with PayPal</a>
+              </Button>
+            </div>
           </nav>
         </div>
       )}

@@ -40,14 +40,23 @@ export default function Home() {
                   Every dollar you give goes directly to purchasing and delivering clothing, bedding, clean water, food, and personal care items to families who have nowhere else to turn.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" asChild className="text-base">
-                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate Now</a>
+              <div className="space-y-4">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button size="lg" asChild className="text-base flex-1">
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
+                      Donate with Stripe
+                    </a>
                   </Button>
-                  <Button size="lg" variant="outline" asChild className="text-base">
-                    <a href="#programs">Learn About Our Work</a>
+                  <Button size="lg" asChild className="text-base flex-1 bg-[#0070ba] hover:bg-[#005ea6] text-white">
+                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
+                      Donate with PayPal
+                    </a>
                   </Button>
                 </div>
+                <Button size="lg" variant="outline" asChild className="text-base w-full">
+                  <a href="#programs">Learn About Our Work</a>
+                </Button>
+              </div>
               </div>
               <div className="relative">
                 <img
@@ -309,12 +318,20 @@ export default function Home() {
                     <span>Connect with the community we serve</span>
                   </div>
                 </div>
-                <Button size="lg" className="w-full" asChild>
-                  <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
-                    Make a Difference Today
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
+                <div className="flex flex-col gap-3">
+                  <Button size="lg" className="w-full" asChild>
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
+                      Donate with Stripe
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button size="lg" className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white" asChild>
+                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
+                      Donate with PayPal
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -418,11 +435,16 @@ export default function Home() {
               </p>
             </div>
 
-            {/* One-Time Donation Button */}
-            <div className="flex justify-center mb-8">
-              <Button size="lg" variant="secondary" className="text-base font-bold px-8" asChild>
+            {/* One-Time Donation Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-3 mb-8 max-w-md mx-auto">
+              <Button size="lg" variant="secondary" className="text-base font-bold flex-1" asChild>
                 <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
-                  Make a One-Time Donation
+                  Donate with Stripe
+                </a>
+              </Button>
+              <Button size="lg" variant="secondary" className="text-base font-bold flex-1 bg-[#0070ba] hover:bg-[#005ea6] text-white" asChild>
+                <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
+                  Donate with PayPal
                 </a>
               </Button>
             </div>

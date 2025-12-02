@@ -368,11 +368,18 @@ export default function Impact() {
                 <p className="text-muted-foreground mb-4">
                   <strong>These stories are why we can't wait.</strong> Every day we delay, more families lose hope. Every dollar you donate brings us closer to reaching the people who need us most.
                 </p>
-                <Button size="lg" asChild>
-                  <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
-                    Help Families Like These Today
-                  </a>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button size="lg" asChild>
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
+                      Donate with Stripe
+                    </a>
+                  </Button>
+                  <Button size="lg" asChild className="bg-[#0070ba] hover:bg-[#005ea6] text-white">
+                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
+                      Donate with PayPal
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -438,15 +445,24 @@ export default function Impact() {
               <p className="text-lg text-muted-foreground mb-8">
                 Every donation brings us closer to supporting 500 households and 300 students in Montego Bay. Be part of our founding donor community.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
-                    Make a Donation
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="/contact">Partner With Us</a>
-                </Button>
+              <div className="space-y-3">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button size="lg" asChild>
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
+                      Donate with Stripe
+                    </a>
+                  </Button>
+                  <Button size="lg" asChild className="bg-[#0070ba] hover:bg-[#005ea6] text-white">
+                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
+                      Donate with PayPal
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex justify-center">
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="/contact">Partner With Us</a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

@@ -223,15 +223,24 @@ export default function About() {
               <p className="text-lg text-muted-foreground mb-8">
                 Whether through donations, volunteering, or partnerships, your support helps families recover and thrive.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
-                    Make a Donation
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="/contact">Partner With Us</a>
-                </Button>
+              <div className="space-y-3">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button size="lg" asChild>
+                    <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
+                      Donate with Stripe
+                    </a>
+                  </Button>
+                  <Button size="lg" asChild className="bg-[#0070ba] hover:bg-[#005ea6] text-white">
+                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
+                      Donate with PayPal
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex justify-center">
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="/contact">Partner With Us</a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
