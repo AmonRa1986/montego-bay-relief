@@ -1,12 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Heart, GraduationCap, Home as HomeIcon, Users, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function Home() {
+  const [donationData, setDonationData] = useState({ amountRaised: 0, goalAmount: 25000 });
+
+  useEffect(() => {
+    // Load donation data from config.json
+    fetch('/config.json')
+      .then(response => response.json())
+      .then(data => {
+        setDonationData({
+          amountRaised: data.amountRaised || 0,
+          goalAmount: data.goalAmount || 25000
+        });
+      })
+      .catch(error => {
+        console.error('Error loading donation data:', error);
+      });
+  }, []);
+
+  const percentFunded = donationData.goalAmount > 0 
+    ? Math.round((donationData.amountRaised / donationData.goalAmount) * 100) 
+    : 0;
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead />
@@ -80,22 +102,21 @@ export default function Home() {
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <p className="text-3xl font-bold">
-                    $<span id="raised">0</span>
+                    ${donationData.amountRaised.toLocaleString()}
                   </p>
-                  <p className="text-sm text-muted-foreground">raised of $25,000 goal</p>
+                  <p className="text-sm text-muted-foreground">raised of ${donationData.goalAmount.toLocaleString()} goal</p>
                 </div>
                 <div className="text-right">
                   <p className="text-2xl font-bold text-primary">
-                    <span id="percent">0</span>%
+                    {percentFunded}%
                   </p>
                   <p className="text-sm text-muted-foreground">funded</p>
                 </div>
               </div>
               <div className="w-full bg-muted rounded-full h-3 overflow-hidden mb-4">
                 <div
-                  id="progressBar"
                   className="h-full bg-primary transition-all duration-1000 ease-out"
-                  style={{ width: '0%' }}
+                  style={{ width: `${percentFunded}%` }}
                 ></div>
               </div>
               <p className="text-center text-sm text-muted-foreground">
