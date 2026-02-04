@@ -25,8 +25,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:helpmontegobayrelief@gmail.com" className="hover:text-primary transition-colors">
-                  helpmontegobayrelief@gmail.com
+                <a href="mailto:info.montegobayrelief@gmail.com" className="hover:text-primary transition-colors">
+                  info.montegobayrelief@gmail.com
                 </a>
               </div>
             </div>
