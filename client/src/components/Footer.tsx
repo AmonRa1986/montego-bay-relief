@@ -51,9 +51,7 @@ export default function Footer() {
               <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 Donate with Stripe
               </a>
-              <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                Donate with PayPal
-              </a>
+
             </nav>
           </div>
 

@@ -69,11 +69,7 @@ export default function Home() {
                       Donate with Stripe
                     </a>
                   </Button>
-                  <Button size="lg" asChild className="text-base flex-1 bg-[#0070ba] hover:bg-[#005ea6] text-white">
-                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
-                      Donate with PayPal
-                    </a>
-                  </Button>
+
                 </div>
                 <Button size="lg" variant="outline" asChild className="text-base w-full">
                   <a href="#programs">Learn About Our Work</a>
@@ -343,12 +339,6 @@ export default function Home() {
                   <Button size="lg" className="w-full" asChild>
                     <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">
                       Donate with Stripe
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button size="lg" className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white" asChild>
-                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
-                      Donate with PayPal
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>

@@ -295,11 +295,7 @@ export default function Programs() {
                       Donate with Stripe
                     </a>
                   </Button>
-                  <Button size="lg" asChild className="bg-[#0070ba] hover:bg-[#005ea6] text-white">
-                    <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
-                      Donate with PayPal
-                    </a>
-                  </Button>
+
                 </div>
                 <div className="flex justify-center">
                   <Button size="lg" variant="outline" asChild>

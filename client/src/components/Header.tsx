@@ -35,9 +35,7 @@ export default function Header() {
             <Button asChild size="sm">
               <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Stripe</a>
             </Button>
-            <Button asChild size="sm" className="bg-[#0070ba] hover:bg-[#005ea6] text-white">
-              <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">PayPal</a>
-            </Button>
+
           </div>
         </nav>
 
@@ -74,9 +72,7 @@ export default function Header() {
               <Button asChild className="w-full">
                 <a href="https://donate.stripe.com/7sY00k9Rh0Ee8cQ3gz63K00" target="_blank" rel="noopener noreferrer">Donate with Stripe</a>
               </Button>
-              <Button asChild className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white">
-                <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">Donate with PayPal</a>
-              </Button>
+
             </div>
           </nav>
         </div>
