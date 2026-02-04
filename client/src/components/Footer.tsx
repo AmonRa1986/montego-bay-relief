@@ -23,9 +23,9 @@ export default function Footer() {
                   (631) 388-1917
                 </a>
               </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info.montegobayrelief@gmail.com" className="hover:text-primary transition-colors">
+              <div className="flex items-start gap-2 text-muted-foreground">
+                <Mail className="h-4 w-4 mt-0.5" />
+                <a href="mailto:info.montegobayrelief@gmail.com" className="hover:text-primary transition-colors break-all">
                   info.montegobayrelief@gmail.com
                 </a>
               </div>
