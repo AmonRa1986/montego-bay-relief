@@ -416,8 +416,8 @@ export default function Home() {
                 <p className="font-semibold text-lg mb-2">
                   Contact us to donate items or volunteer:
                 </p>
-                <a href="mailto:helpmontegobayrelief@gmail.com" className="text-primary font-semibold text-lg underline">
-                  helpmontegobayrelief@gmail.com
+                <a href="mailto:info.montegobayrelief@gmail.com" className="text-primary font-semibold text-lg underline">
+                  info.montegobayrelief@gmail.com
                 </a>
                 <p className="text-sm text-muted-foreground mt-4">
                   We'll coordinate pickup or provide drop-off locations in your area.
@@ -575,8 +575,8 @@ export default function Home() {
 
             <p className="text-sm mt-6 opacity-75">
               For questions about donations, contact us at{" "}
-              <a href="mailto:helpmontegobayrelief@gmail.com" className="underline font-semibold">
-                helpmontegobayrelief@gmail.com
+              <a href="mailto:info.montegobayrelief@gmail.com" className="underline font-semibold">
+                info.montegobayrelief@gmail.com
               </a>
             </p>
           </div>
