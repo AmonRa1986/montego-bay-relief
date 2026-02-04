@@ -453,11 +453,7 @@ export default function Home() {
                   Donate with Stripe
                 </a>
               </Button>
-              <Button size="lg" variant="secondary" className="text-base font-bold flex-1 bg-[#0070ba] hover:bg-[#005ea6] text-white" asChild>
-                <a href="https://www.paypal.com/ncp/payment/EPU97Q58HQN36" target="_blank" rel="noopener noreferrer">
-                  Donate with PayPal
-                </a>
-              </Button>
+
             </div>
 
             {/* Monthly Donation Tiers */}
