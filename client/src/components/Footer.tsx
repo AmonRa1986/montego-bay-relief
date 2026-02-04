@@ -91,7 +91,7 @@ export default function Footer() {
         <div className="border-t pt-8">
           <div className="bg-secondary/50 rounded-lg p-4 mb-6">
             <p className="text-xs text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Organization Status:</strong> Montego Bay Relief is a nonprofit organization currently in formation. We are building a platform to provide food and essential support to communities in need. Our Florida incorporation filings are underway, and we will pursue federal 501(c)(3) status upon approval.
+              <strong className="text-foreground">Organization Status:</strong> Montego Bay Relief, Inc. is a registered nonprofit organization in the State of Florida and a tax-exempt 501(c)(3) public charity. Contributions are tax-deductible to the fullest extent allowed by law.
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export default function Footer() {
                 Privacy Policy
               </Link>
               <span>•</span>
-              <span className="font-semibold">Organization in Formation</span>
+              <span className="font-semibold">501(c)(3) Nonprofit Organization</span>
             </div>
           </div>
         </div>

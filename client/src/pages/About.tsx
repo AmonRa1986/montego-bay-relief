@@ -70,7 +70,7 @@ export default function About() {
                    What began as a small grassroots effort to support families in our home community is growing into a formal nonprofit organization. We have homes in Montego Bay and understand the unique challenges facing families in the region. Our approach is rooted in cultural understanding, local partnerships, and a commitment to ensuring every dollar donated directly supports relief and rebuilding efforts.
                 </p>
                 <p>
-                   As an organization in formation, we are building a sustainable nonprofit that can respond to immediate crises while investing in long-term community development. Our programs focus on emergency relief kits, educational support for students, and community rebuilding initiatives that empower local leaders and volunteers.
+                   As a registered 501(c)(3) nonprofit organization, we are building a sustainable platform that can respond to immediate crises while investing in long-term community development. Our programs focus on emergency relief kits, educational support for students, and community rebuilding initiatives that empower local leaders and volunteers.
                 </p>
                 <p>
                   We believe in radical transparency, hyper-local focus, and the power of community-led solutions. Every distribution is coordinated with local leaders, every program is designed with input from beneficiaries, and every donor receives clear reporting on how their contribution makes an impact.
@@ -91,15 +91,15 @@ export default function About() {
                       <Shield className="h-8 w-8 text-[#008B8B]" />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold mb-3">Organization in Formation</h2>
+                      <h2 className="text-2xl font-bold mb-3">Official Nonprofit Status</h2>
                       <p className="text-muted-foreground mb-4">
-                        Montego Bay Relief is a nonprofit organization currently in formation. We are building a platform to provide food and essential support to communities in need. Our Florida incorporation filings are underway, and we will pursue federal 501(c)(3) status upon approval.
+                        Montego Bay Relief, Inc. is a registered nonprofit organization in the State of Florida and a tax-exempt 501(c)(3) public charity. We are dedicated to providing food, essential support, and long-term rebuilding aid to communities in need.
                       </p>
                       <p className="text-muted-foreground mb-4">
-                        <strong>What this means for donors:</strong> As we are in formation, donations are not yet tax-deductible. We are committed to transparency throughout our formation process and will update our status as we complete incorporation and pursue 501(c)(3) approval. Every dollar donated goes directly toward relief efforts in Montego Bay.
+                        <strong>What this means for donors:</strong> Your contributions are tax-deductible to the fullest extent allowed by law. We are committed to transparency and accountability, ensuring every dollar donated goes directly toward relief efforts in Montego Bay.
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        <strong>Status:</strong> Formation in progress | <strong>Planned State:</strong> Florida | <strong>Target:</strong> 501(c)(3) nonprofit
+                        <strong>Status:</strong> Active 501(c)(3) Public Charity | <strong>State:</strong> Florida | <strong>EIN:</strong> Available upon request
                       </p>
                     </div>
                   </div>

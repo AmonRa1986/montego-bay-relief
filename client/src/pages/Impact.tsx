@@ -20,7 +20,7 @@ export default function Impact() {
                 Our Hurricane Relief Goals
               </h1>
               <p className="text-xl text-muted-foreground">
-                As an organization in formation, we're building toward measurable impact in Montego Bay. Here's what we're working to achieve and how we'll track our progress.
+                As a registered 501(c)(3) nonprofit, we're building toward measurable impact in Montego Bay. Here's what we're working to achieve and how we'll track our progress.
               </p>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function Impact() {
                       <li>• Reach 400 households with comprehensive relief and rebuilding support</li>
                       <li>• Support 250 students through full school year</li>
                       <li>• Launch small business recovery grants for 25 local entrepreneurs</li>
-                      <li>• Complete Florida incorporation and pursue 501(c)(3) tax-exempt status</li>
+                      <li>• Maintain 501(c)(3) tax-exempt status and Florida charitable registration</li>
                     </ul>
                   </div>
                 </div>

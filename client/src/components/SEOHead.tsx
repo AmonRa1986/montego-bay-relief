@@ -8,7 +8,7 @@ interface SEOHeadProps {
 
 export function SEOHead({ 
   title = "Montego Bay Relief | Hurricane Melissa Disaster Relief & Jamaica Humanitarian Aid",
-  description = "Montego Bay Relief, Inc. provides urgent hurricane disaster relief, humanitarian aid, educational support, and community rebuilding to families in Montego Bay, Jamaica affected by Hurricane Melissa. 501(c)(3) pending nonprofit founded by individuals with deep roots in the Montego Bay community.",
+  description = "Montego Bay Relief, Inc. provides urgent hurricane disaster relief, humanitarian aid, educational support, and community rebuilding to families in Montego Bay, Jamaica affected by Hurricane Melissa. 501(c)(3) nonprofit organization founded by individuals with deep roots in the Montego Bay community.",
   keywords = "Montego Bay relief, Jamaica disaster relief, Hurricane Melissa aid, Caribbean hurricane recovery, Jamaica humanitarian aid, Montego Bay nonprofit, Jamaica charity, hurricane relief Jamaica, Montego Bay donations, Jamaica emergency relief, Caribbean disaster response, Jamaica community development, Montego Bay families, Jamaica relief organization, hurricane recovery Jamaica, Montego Bay humanitarian support, Jamaica relief fund, Caribbean relief efforts, Jamaica nonprofit organization, Montego Bay disaster response"
 }: SEOHeadProps) {
   

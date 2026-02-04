@@ -45,7 +45,7 @@ export default function Home() {
                   🚨 URGENT: Hurricane Relief Needed
                 </span>
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full ml-2">
-                  Organization in Formation
+                  501(c)(3) Nonprofit Organization
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -56,7 +56,7 @@ export default function Home() {
                   <strong>Families in Montego Bay, Jamaica have lost everything to Hurricane Melissa</strong>—the strongest Category 5 storm to hit Jamaica in modern history. Homes destroyed. No power. No clean water. Families sleeping in damaged shelters without basic necessities.
                 </p>
                 <p className="text-base font-semibold text-foreground">
-                  <strong>Montego Bay Relief, Inc.</strong> is a nonprofit organization in formation, founded by individuals with deep family roots in Montego Bay. This is our home, our community, our family. We provide humanitarian relief, educational support, and community rebuilding aid to help our neighbors recover and thrive.
+                  <strong>Montego Bay Relief, Inc.</strong> is a registered 501(c)(3) nonprofit organization founded by individuals with deep family roots in Montego Bay. This is our home, our community, our family. We provide humanitarian relief, educational support, and community rebuilding aid to help our neighbors recover and thrive.
                 </p>
                 <p className="text-base font-semibold text-foreground">
                   Every dollar you give goes directly to purchasing and delivering clothing, bedding, clean water, food, and personal care items to families who have nowhere else to turn.
@@ -135,7 +135,7 @@ export default function Home() {
                 "To provide humanitarian relief, emergency assistance, educational support, and community rebuilding aid to underserved families in Montego Bay, Jamaica, while fostering charitable programs and donor engagement within the United States."
               </blockquote>
               <p className="text-base text-muted-foreground leading-relaxed">
-                <strong>Montego Bay Relief, Inc.</strong> is a nonprofit organization in formation dedicated to Caribbean hurricane recovery and long-term community development in Jamaica. Founded by individuals with deep family roots in Montego Bay, we understand the unique challenges facing Jamaican communities and work directly with local coordinators to ensure disaster relief reaches those who need it most. Our Jamaica humanitarian aid programs focus on emergency relief, educational resources for youth, and sustainable community rebuilding efforts throughout the Montego Bay area and surrounding parishes.
+                <strong>Montego Bay Relief, Inc.</strong> is a registered 501(c)(3) nonprofit organization dedicated to Caribbean hurricane recovery and long-term community development in Jamaica. Founded by individuals with deep family roots in Montego Bay, we understand the unique challenges facing Jamaican communities and work directly with local coordinators to ensure disaster relief reaches those who need it most. Our Jamaica humanitarian aid programs focus on emergency relief, educational resources for youth, and sustainable community rebuilding efforts throughout the Montego Bay area and surrounding parishes.
               </p>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Hurricane Relief Goals</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                As an organization in formation, we're committed to reaching these targets to help Montego Bay families recover from Hurricane Melissa. Your support brings us closer to these goals.
+                As a community-focused nonprofit, we're committed to reaching these targets to help Montego Bay families recover from Hurricane Melissa. Your support brings us closer to these goals.
               </p>
             </div>
 
@@ -293,7 +293,7 @@ export default function Home() {
                     <div>
                       <h3 className="font-bold mb-1">Transparent & Accountable</h3>
                       <p className="text-sm text-muted-foreground">
-                        As an organization in formation pursuing nonprofit status, we are committed to transparency and accountability that informal projects cannot provide.
+                        As a registered 501(c)(3) nonprofit, we are committed to transparency and accountability that informal projects cannot provide.
                       </p>
                     </div>
                   </div>
@@ -452,7 +452,7 @@ export default function Home() {
 
             <div className="bg-white/10 backdrop-blur rounded-lg p-6 mb-8 text-left">
               <p className="text-sm leading-relaxed">
-                <strong>Donation Status:</strong> Montego Bay Relief is currently in formation. Donations are not yet tax-deductible as we are completing our incorporation and will pursue 501(c)(3) status. We are committed to transparency and will provide receipts for all contributions.
+                <strong>Donation Status:</strong> Montego Bay Relief, Inc. is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law. We provide official receipts for all contributions.
               </p>
             </div>
 
